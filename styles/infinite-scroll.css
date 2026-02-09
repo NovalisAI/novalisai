@@ -1,0 +1,50 @@
+.inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 80px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@media screen and (min-width: 400px) {
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+}
+
+.section-wrapper {
+  display: flex;
+  animation: swipe 280s linear infinite backwards;
+}
+.section-wrapper-reverse {
+  display: flex;
+  animation: swipe-reverse 280s linear infinite backwards;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+@keyframes swipe-reverse {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
