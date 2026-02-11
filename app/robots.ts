@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: ["/"],
       },
     ],
-    sitemap: "https://zappicon.com/sitemap.xml",
+    sitemap: "https://novalisai.com/sitemap.xml",
   };
 }

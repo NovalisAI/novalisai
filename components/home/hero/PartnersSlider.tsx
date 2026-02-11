@@ -31,8 +31,8 @@ export default function PartnersSlider() {
   const [pauseAnimation, setPauseAnimation] = useState(false);
 
   return (
-    <div className="py-12 border-t border-border">
-      <div className="text-center mb-8">
+    <div className="py-6">
+      <div className="text-center mb-14">
         <p className="heading-6 text-muted-foreground font-semibold">
           TRUSTED BY LEADING COMPANIES
         </p>

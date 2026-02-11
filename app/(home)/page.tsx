@@ -1,10 +1,5 @@
 import Container from "@/components/layout/Container";
-import Categories from "@/components/home/categories";
-import Faq from "@/components/home/faq";
 import Hero from "@/components/home/hero";
-import Pricing from "@/components/home/pricing";
-import Styles from "@/components/home/styles";
-import Values from "@/components/home/values";
 import GradientSection from "@/components/home/values/GradientSection";
 import Team from "@/components/home/team";
 import Domains from "@/components/home/domains";
@@ -24,6 +19,9 @@ export default function Home() {
       <Container type="extrinsic">
         <Domains />
       </Container>
+      <Container type="extrinsic">
+        <Team />
+      </Container>
       <Container type="extrinsic" id="projects">
         <Projects />
       </Container>
@@ -35,9 +33,6 @@ export default function Home() {
         }}
       >
         <GradientSection />
-      </Container>
-      <Container type="extrinsic">
-        <Team />
       </Container>
     </div>
   );

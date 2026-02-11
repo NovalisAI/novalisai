@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectShowcase from "./ProjectShowcase";
 
 interface Project {
   id: number;
@@ -13,21 +14,7 @@ interface Project {
 export default function Projects() {
   return (
     <div className="py-24">
-      <div className="flex flex-col items-center justify-center mb-24">
-        <h2 className="heading-2 font-bold mb-4 text-center">
-          Featured Projects
-        </h2>
-        <p className="heading-6 mb-4 text-center text-muted-foreground max-w-150">
-          Showcase of our most impactful work across various industries and
-          technologies.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
+      <ProjectShowcase />
     </div>
   );
 }
