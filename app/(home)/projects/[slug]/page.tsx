@@ -7,7 +7,6 @@ import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { getProjectBySlug, projects } from "@/lib/projects";
-import { cn } from "@/lib/utils";
 
 interface ProjectPageProps {
   params: {
@@ -151,7 +150,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
           {/* Sidebar */}
           <aside className="space-y-8">
-            <div className="p-6 rounded-2xl border border-border bg-card shadow-sm sticky top-24">
+            <div className="p-6 rounded-2xl border border-border bg-card shadow-sm sticky top-32">
               <h3 className="font-semibold text-lg mb-4">Project Details</h3>
 
               <div className="space-y-6">

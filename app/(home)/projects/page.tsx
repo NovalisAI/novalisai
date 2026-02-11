@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { CategoryFilter } from "@/components/projects/CategoryFilter";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import {
@@ -30,24 +29,14 @@ export default function ProjectsPage() {
         <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-secondary/30 to-background z-0 pointer-events-none" />
 
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground"
-          >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
             Our <span className="text-primary">Projects</span> Showcase
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
-          >
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore our portfolio of digital experiences, where design meets
             technology to solve real-world problems.
-          </motion.p>
+          </p>
         </div>
       </section>
 
@@ -59,31 +48,22 @@ export default function ProjectsPage() {
           onSelectCategory={setActiveCategory}
         />
 
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                layoutId={`project-${project.id}`}
-              />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              layoutId={`project-${project.id}`}
+            />
+          ))}
+        </div>
 
         {filteredProjects.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-20"
-          >
+          <div className="text-center py-20">
             <p className="text-xl text-muted-foreground">
               No projects found in this category.
             </p>
-          </motion.div>
+          </div>
         )}
       </section>
     </div>

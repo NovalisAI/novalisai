@@ -91,40 +91,6 @@ const projects: Project[] = [
     ],
     tags: ["Architecture", "Portfolio", "Design"],
   },
-  {
-    id: 5,
-    title: "Dr. Julia Woehr",
-    description: "Distilling architectural impact to its spatial essence",
-    longDescription:
-      "We created a portfolio platform that showcases architectural designs with unprecedented clarity and aesthetic appeal. The minimalist interface allows the visual work to take center stage while providing easy navigation.",
-    images: [
-      "https://images.unsplash.com/photo-1493195671595-30a332807d65?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1452175543248-32588e0ab2fe?w=800&h=600&fit=crop",
-    ],
-    links: [
-      { label: "Portfolio", href: "#" },
-      { label: "Contact", href: "#" },
-    ],
-    tags: ["Architecture", "Portfolio", "Design"],
-  },
-  {
-    id: 6,
-    title: "Dr. Julia Woehr",
-    description: "Distilling architectural impact to its spatial essence",
-    longDescription:
-      "We created a portfolio platform that showcases architectural designs with unprecedented clarity and aesthetic appeal. The minimalist interface allows the visual work to take center stage while providing easy navigation.",
-    images: [
-      "https://images.unsplash.com/photo-1493195671595-30a332807d65?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1452175543248-32588e0ab2fe?w=800&h=600&fit=crop",
-    ],
-    links: [
-      { label: "Portfolio", href: "#" },
-      { label: "Contact", href: "#" },
-    ],
-    tags: ["Architecture", "Portfolio", "Design"],
-  },
 ];
 
 interface ProjectShowcaseProps {}
