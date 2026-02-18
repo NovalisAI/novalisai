@@ -155,7 +155,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-sm font-medium text-muted-foreground mb-2">
-                    Tech Stack
+                    Tags
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (

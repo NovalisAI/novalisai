@@ -307,31 +307,34 @@ export const projects: Project[] = [
     id: "16",
     slug: "micro-hack-2",
     title: "Micro Hack 2.0 Website",
-    description: "Website for the second edition of Micro Hack.",
+    description:
+      "Website for the second edition of Micro Hack an IT hackathon.",
     longDescription:
       "Dedicated event website for Micro Hack 2.0, facilitating participant interaction and information.",
     category: "Web",
     tags: ["Hackathon", "Event", "Community"],
-    image: "/realisations/micro-hack-2.0-hero.png",
-    gallery: ["/realisations/micro-hack-2.0-hero.png"],
+    image: "/realisations/mchack2.png",
+    gallery: ["/realisations/mchack2.png"],
     problem: "Managing a large scale hackathon event.",
     solution: "Deployed a scalable event website for registration and info.",
     features: ["Hackathon workflow", "Team registration", "Live updates"],
+    demoUrl: "https://microhack.microclub.info/",
   },
   {
     id: "17",
-    slug: "ramzy-kemmoun-portfolio",
-    title: "Ramzy KEMMOUN's Portfolio",
-    description: "Personal portfolio website for a developer.",
+    slug: "portfolios",
+    title: "Portfolios",
+    description: "We can build your portfolio website.",
     longDescription:
-      "A showcase of Ramzy KEMMOUN's skills, projects, and professional journey.",
+      "Personal portfolio website for a content creator, A showcase of skills, projects, and professional journey.",
     category: "Design",
     tags: ["Portfolio", "Personal", "Dev"],
-    image: "/realisations/ramzy-kemmoun-portfolio-hero.png",
-    gallery: ["/realisations/ramzy-kemmoun-portfolio-hero.png"],
+    image: "/realisations/portfolios.png",
+    gallery: ["/realisations/portfolios.png"],
     problem: "Showcasing personal work effectively.",
     solution: "Designed a clean, project-focused personal portfolio.",
     features: ["Project gallery", "About section", "Contact form"],
+    demoUrl: "https://ramzykemmoun.space/",
   },
   {
     id: "18",
@@ -342,8 +345,8 @@ export const projects: Project[] = [
       "Nightbyte's website serves as a community hub for tech enthusiasts, featuring events and resources.",
     category: "Web",
     tags: ["Community", "Tech", "Next.js"],
-    image: "/realisations/nightbyte-hero.png",
-    gallery: ["/realisations/nightbyte-hero.png"],
+    image: "/realisations/nightbyte.png",
+    gallery: ["/realisations/nightbyte.png"],
     problem: "Building a digital home for a tech community.",
     solution: "Created a vibrant community website with event features.",
     features: ["Community news", "Event calendar", "Member showcase"],
@@ -358,8 +361,8 @@ export const projects: Project[] = [
       "MyWorkflow helps users streamline their daily tasks and optimize their productivity processes.",
     category: "SaaS",
     tags: ["Productivity", "Workflow", "SaaS"],
-    image: "/realisations/myworkflow.png",
-    gallery: ["/realisations/myworkflow.png"],
+    image: "/realisations/mywkfl.png",
+    gallery: ["/realisations/mywkfl.png"],
     problem: "Inefficient personal and team workflow management.",
     solution: "Built a customizable workflow automation tool.",
     features: ["Task management", "Process automation", "Efficiency analytics"],
@@ -382,6 +385,110 @@ export const projects: Project[] = [
       "Document scanning",
       "Multi-language support",
     ],
+  },
+
+  {
+    id: "21",
+    slug: "upmate",
+    title: "Upmate",
+    description: "Your startup's first teammate",
+    longDescription:
+      "From idea to pitch deck Upmate helps you brainstorm, validate, and visualize your startup with AI-powered tools built for founders.",
+    category: "SaaS",
+    tags: ["AI", "Startup", "SaaS"],
+    image: "/realisations/upmate.png",
+    gallery: ["/realisations/upmate.png"],
+    problem: "Many founders struggle to turn ideas into viable startups.",
+    solution:
+      "Upmate provides AI-powered tools to help founders brainstorm, validate, and visualize their startups.",
+    features: [
+      "AI-powered brainstorming",
+      "Market validation",
+      "Pitch deck generation",
+    ],
+    demoUrl: "https://upmate-x.vercel.app/",
+  },
+
+  {
+    id: "22",
+    slug: "collab-ted",
+    title: "CollabTED",
+    description: "Your ultimate collaboration platform",
+    longDescription:
+      "CollabTed is your ultimate collaboration platform, designed to simplify teamwork and boost productivity. From managing tasks and improving communication to staying organized, we provide intuitive tools to help teams achieve more together.",
+    category: "SaaS",
+    tags: ["Startup", "SaaS", "Development"],
+    image: "/realisations/collab-ted.png",
+    gallery: ["/realisations/collab-ted.png"],
+    problem: "Many teams struggle to collaborate effectively.",
+    solution:
+      "CollabTed provides intuitive tools to help teams collaborate more effectively.",
+    features: ["Task management", "Communication", "Organization"],
+  },
+  {
+    id: "23",
+    slug: "jethings",
+    title: "Jethings",
+    description: "Run Your Entire Business in One Smart System",
+    longDescription:
+      "Simple enough for any team. Powerful enough to manage stock, process sales and track performance in real time.",
+    category: "Web",
+    tags: ["Startup", "SaaS", "Development"],
+    image: "/realisations/jethings.png",
+    gallery: ["/realisations/jethings.png"],
+    problem:
+      "Many teams struggle to manage stock, process sales and track performance in real time.",
+    solution:
+      "Jethings provides intuitive tools to help teams manage stock, process sales and track performance in real time.",
+    features: ["Stock management", "Sales processing", "Performance tracking"],
+    demoUrl: "https://www.jethings.com/",
+  },
+
+  {
+    id: "24",
+    slug: "task-board",
+    title: "Task Board",
+    description:
+      "A web application for managing tasks and projects with an intuitive interface, offering features like task assignment, progress tracking, and collaboration.",
+    longDescription:
+      "This Task Board Management web app is designed to streamline project management. It helps users organize tasks, assign responsibilities, and track progress efficiently",
+    category: "Web",
+    tags: ["Startup", "SaaS", "Development"],
+    image: "/realisations/taskboard.png",
+    gallery: [
+      "/realisations/taskboard.png",
+      "/realisations/taskboard-1.png",
+      "/realisations/taskboard-2.png",
+    ],
+    problem:
+      "Many teams struggle to manage tasks and projects efficiently, leading to missed deadlines and poor communication.",
+    solution:
+      "This Task Board Management web app is designed to streamline project management. It helps users organize tasks, assign responsibilities, and track progress efficiently",
+    features: ["Task management", "Project management", "Progress tracking"],
+  },
+
+  {
+    id: "25",
+    slug: "carhub",
+    title: "Car Hub",
+    description:
+      "CarHub is a car rental platform that allows users to rent cars from different rental companies.",
+    longDescription:
+      "CarHub is a car rental platform that allows users to rent cars from different rental companies. It provides a seamless and user-friendly experience for car rentals, with a wide range of vehicles to choose from. Users can easily search, compare, and book cars that meet their needs, with transparent pricing and flexible rental options. CarHub also offers features like vehicle tracking, maintenance management, and customer support to ensure a hassle-free car rental experience.",
+    category: "Web",
+    tags: ["Startup", "SaaS", "Development"],
+    image: "/realisations/carhub.png",
+    gallery: ["/realisations/carhub.png"],
+    problem:
+      "Car rental companies struggle to manage their fleets and bookings, leading to inefficiencies and poor customer experience.",
+    solution:
+      "CarHub provides a seamless and user-friendly experience for car rentals, with a wide range of vehicles to choose from. Users can easily search, compare, and book cars that meet their needs, with transparent pricing and flexible rental options. CarHub also offers features like vehicle tracking, maintenance management, and customer support to ensure a hassle-free car rental experience.",
+    features: [
+      "Vehicle tracking",
+      "Maintenance management",
+      "Customer support",
+    ],
+    demoUrl: "https://car-catalogue-app-sigma.vercel.app/",
   },
 ];
 
