@@ -11,9 +11,9 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { bestProjects, getAllProjects } from "@/lib/projects";
+import { getBestProjects } from "@/lib/projects";
 
-const projects = bestProjects();
+const projects = getBestProjects();
 
 const ProjectShowcase: React.FC = () => {
   const [activeProject, setActiveProject] = useState(0);

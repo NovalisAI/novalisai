@@ -490,12 +490,205 @@ export const projects: Project[] = [
     ],
     demoUrl: "https://car-catalogue-app-sigma.vercel.app/",
   },
+  {
+    id: "26",
+    slug: "shift",
+    title: "Shift",
+    description:
+      "L'innovation n'est plus un hasard. Transformez vos signaux en décisions stratégiques grâce au premier OS de gestion de l'innovation certifié ISO 56002.",
+    longDescription:
+      "L'innovation n'est plus un hasard. Transformez vos signaux faibles en décisions stratégiques grâce au premier OS de gestion de l'innovation certifié ISO 56002. Structurez vos idées, pilotez vos initiatives et déployez une culture d'innovation alignée sur la norme internationale ISO 56002.",
+    category: "SaaS",
+    tags: ["Startup", "SaaS", "Development"],
+    image: "/realisations/shift.png",
+    gallery: [
+      "/realisations/shift.png",
+      "/realisations/shift-1.png",
+      "/realisations/shift-2.png",
+      "/realisations/shift-3.png",
+      "/realisations/shift-4.png",
+    ],
+    problem:
+      "Les entreprises collectent des idées, des signaux faibles et des opportunités, mais manquent de structure, de visibilité et de méthode pour les transformer en décisions stratégiques mesurables. L'innovation reste fragmentée, non pilotée et difficilement alignée avec les standards internationaux.",
+
+    solution:
+      "Un OS complet de gestion de l'innovation certifié ISO 56002, permettant de centraliser les idées, structurer les processus, mesurer la performance et aligner l'innovation avec la stratégie d'entreprise.",
+
+    features: [
+      "Collecte et centralisation des idées et signaux faibles",
+      "Workflow structuré conforme à la norme ISO 56002",
+      "Gestion des portefeuilles projets innovants",
+    ],
+  },
+
+  {
+    id: "27",
+    slug: "kanban",
+    title: "Kanban",
+    description:
+      "Manage your tasks smarter. Organisez, priorisez et optimisez votre workflow grâce à un Kanban intelligent propulsé par l'IA.",
+    longDescription:
+      "Kanban est une plateforme SaaS moderne de gestion de tâches qui combine la simplicité du Kanban avec la puissance de l'intelligence artificielle. Créez vos boards, organisez vos tâches et laissez l'IA analyser vos priorités, détecter les blocages et optimiser votre productivité en temps réel.",
+
+    category: "SaaS",
+    tags: ["Productivity", "AI", "Kanban", "Task Management"],
+
+    image: "/realisations/kanban.png",
+
+    gallery: ["/realisations/kanban.png"],
+
+    problem:
+      "Les équipes perdent du temps à gérer leurs tâches manuellement, manquent de visibilité sur les priorités et ont du mal à identifier les blocages ou les retards avant qu'ils n'impactent la performance.",
+
+    solution:
+      "Une plateforme Kanban intelligente qui centralise les tâches, automatise l'organisation via l'IA, suggère des priorités, détecte les retards et fournit des insights en temps réel pour améliorer la productivité.",
+
+    features: [
+      "Boards Kanban dynamiques avec drag & drop",
+      "Priorisation automatique des tâches via IA",
+      "Détection intelligente des blocages",
+    ],
+  },
+  {
+    id: "28",
+    slug: "jaggy-store",
+    title: "Jaggy Store",
+    description: "Boutique en ligne moderne de vêtements tendance.",
+    longDescription:
+      "Jaggy Store est une plateforme e-commerce complète dédiée à la mode contemporaine, offrant une expérience d'achat fluide et élégante aux utilisateurs.",
+    category: "Web",
+    tags: ["E-commerce", "React", "Next.js", "Tailwind"],
+    image: "/realisations/jaggy-hero.png",
+    gallery: ["/realisations/jaggy-hero.png"],
+    problem:
+      "Besoin d'une boutique en ligne performante pour une marque de vêtements en pleine croissance.",
+    solution:
+      "Développement d'un site e-commerce avec tunnel d'achat optimisé et gestion simplifiée des stocks.",
+    features: [
+      "Catalogue de produits dynamique",
+      "Système de panier et commande sécurisé",
+      "Interface responsive haute performance",
+      "Gestion des stocks en temps réel",
+    ],
+  },
+  {
+    id: "29",
+    slug: "crazy-foot",
+    title: "Crazy Foot",
+    description:
+      "La destination ultime pour les passionnés de maillots de football.",
+    longDescription:
+      "Crazy Foot est un site spécialisé dans la vente de maillots de football authentiques et de collection, conçu pour les fans exigeants cherchant la qualité et l'exclusivité.",
+    category: "Web",
+    tags: ["E-commerce", "Next.js", "Soccer", "Retail"],
+    image: "/realisations/crazyfoot-hero.png",
+    gallery: ["/realisations/crazyfoot-hero.png"],
+    problem:
+      "Difficulté pour les fans de trouver des maillots spécifiques avec une expérience d'achat sécurisée.",
+    solution:
+      "Une plateforme dédiée avec filtres avancés par ligue, club et saison pour une recherche rapide.",
+    features: [
+      "Filtres par équipe et saison",
+      "Personnalisation optionnelle des maillots",
+      "Paiement sécurisé et rapide",
+      "Suivi de commande intégré",
+    ],
+  },
+  {
+    id: "30",
+    slug: "magficon-landing",
+    title: "Magficon Landing Page",
+    description: "Site vitrine premium pour une banque d'icônes business.",
+    longDescription:
+      "Une landing page captivante conçue pour présenter les packs d'icônes Magficon, mettant en avant la qualité et la diversité du design pour les professionnels.",
+    category: "Design",
+    tags: ["Landing Page", "UI/UX", "Resources"],
+    image: "/realisations/magficon-landing-hero.png",
+    gallery: ["/realisations/magficon-landing-hero.png"],
+    problem:
+      "Besoin d'une présentation percutante pour vendre des ressources graphiques premium.",
+    solution:
+      "Design minimaliste et animations fluides pour valoriser le produit visuel et augmenter les conversions.",
+    features: [
+      "Showcase interactif d'icônes",
+      "Section de prix claire et structurée",
+      "Optimisation SEO pour le design",
+      "Performance de chargement exceptionnelle",
+    ],
+  },
+  {
+    id: "31",
+    slug: "magficon-search",
+    title: "Magficon Search",
+    description:
+      "Moteur de recherche et plateforme de personnalisation d'icônes.",
+    longDescription:
+      "Magficon Search est une plateforme interactive permettant aux designers de trouver, personnaliser les couleurs et les styles en direct, puis télécharger des icônes sur mesure.",
+    category: "SaaS",
+    tags: ["SaaS", "Tool", "Design", "Productivity"],
+    image: "/realisations/magficon-search-hero.png",
+    gallery: ["/realisations/magficon-search-hero.png"],
+    problem:
+      "Les designers perdent trop de temps à recolorer manuellement les icônes téléchargées.",
+    solution:
+      "Intégration d'un éditeur SVG en direct pour ajuster les styles avant le téléchargement immédiat.",
+    features: [
+      "Recherche par mots-clés avancée",
+      "Personnalisation des couleurs en direct",
+      "Export multi-formats (SVG, PNG, PDF)",
+      "Gestion de collections personnelles",
+    ],
+  },
+  {
+    id: "32",
+    slug: "joptic",
+    title: "Joptic",
+    description:
+      "Dashboard de gestion de stock pour le réseau national de lunetterie.",
+    longDescription:
+      "Une solution SaaS robuste pour la gestion centralisée des stocks de lunettes à l'échelle nationale, facilitant la logistique et le réapprovisionnement des opticiens.",
+    category: "SaaS",
+    tags: ["SaaS", "Dashboard", "Inventory", "Health"],
+    image: "/realisations/joptic-hero.png",
+    gallery: ["/realisations/joptic-hero.png"],
+    problem:
+      "Manque de visibilité globale sur les stocks de lunettes au niveau national.",
+    solution:
+      "Dashboard analytique en temps réel avec alertes de stock bas et suivi précis des ventes.",
+    features: [
+      "Gestion multi-sites centralisée",
+      "Statistiques de vente détaillées",
+      "Alertes de stock automatisées",
+      "Interface de gestion simplifiée",
+    ],
+  },
+  {
+    id: "33",
+    slug: "qarini",
+    title: "Qarini",
+    description: "Plateforme d'e-learning interactive pour tous les niveaux.",
+    longDescription:
+      "Qarini est un écosystème d'apprentissage complet permettant aux formateurs et aux étudiants de collaborer efficacement à distance grâce à des outils pédagogiques modernes.",
+    category: "Web",
+    tags: ["Education", "LMS", "E-learning", "React"],
+    image: "/realisations/qarini-hero.png",
+    gallery: ["/realisations/qarini-hero.png"],
+    problem:
+      "Besoin d'une solution d'apprentissage structurée et accessible partout pour les apprenants.",
+    solution:
+      "Plateforme LMS avec gestion de cours vidéo, exercices interactifs et suivi complet de progression.",
+    features: [
+      "Cours vidéo et ressources PDF",
+      "Quiz et évaluations interactives",
+      "Tableau de bord étudiant personnalisé",
+      "Espace instructeur dédié à la gestion",
+    ],
+  },
 ];
 
 export const getAllProjects = () => projects;
 
-export const bestProjects = () =>
-  projects.filter((project) => !!project.featured);
+export const getBestProjects = () => [...projects].slice(0, 4);
 
 export const getProjectBySlug = (slug: string) => {
   return projects.find((project) => project.slug === slug);
