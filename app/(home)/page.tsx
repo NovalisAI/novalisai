@@ -5,6 +5,7 @@ import Team from "@/components/home/team";
 import Domains from "@/components/home/domains";
 import Projects from "@/components/home/projects";
 import About from "@/components/home/about";
+import PartnersSlider from "@/components/home/hero/PartnersSlider";
 
 export default function Home() {
   return (
@@ -12,6 +13,10 @@ export default function Home() {
       <Container type="extrinsic">
         <Hero />
       </Container>
+
+      <div className="py-12 bg-background border-y border-border">
+        <PartnersSlider />
+      </div>
 
       <Container type="intrinsic" className="bg-accent">
         <About />

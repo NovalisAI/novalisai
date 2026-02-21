@@ -18,7 +18,7 @@ export default function Styles() {
               "bg-accent pt-8 pb-6 rounded-xl flex flex-col items-center justify-center",
               {
                 "col-span-2 lg:col-span-1": i + 1 === styles.length,
-              }
+              },
             )}
           >
             <Image
@@ -32,7 +32,7 @@ export default function Styles() {
             <p className="font-semibold">{style.iconsCount} ICONS</p>
           </div>
         ))}
-        <div className="bg-[#F58855] rounded-xl text-white space-x-6 pt-8 pb-8 px-10 flex items-start col-span-2 lg:col-span-2">
+        <div className="bg-[#F58855] rounded-xl text-surface space-x-6 pt-8 pb-8 px-10 flex items-start col-span-2 lg:col-span-2">
           <Image
             src="/assets/Keyline-zappicon.png"
             width={96}
@@ -55,7 +55,7 @@ export default function Styles() {
             {formats.map((format, i) => (
               <div
                 key={i}
-                className="flex flex-row items-center justify-center gap-3 bg-white rounded-full w-11 h-11"
+                className="flex flex-row items-center justify-center gap-3 bg-surface rounded-full w-11 h-11"
               >
                 <Image
                   src={format.image}

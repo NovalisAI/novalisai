@@ -17,7 +17,7 @@ export default function TeamCard({ member }: { member: TeamMember }) {
       <div className="mb-6 flex justify-center">
         <Avatar className="w-32 h-32 border-4 border-accent">
           <AvatarImage src={member.avatar} alt={member.name} />
-          <AvatarFallback className="heading-2 bg-primary text-white">
+          <AvatarFallback className="heading-2 bg-primary text-surface">
             {member.name
               .split(" ")
               .map((n) => n.charAt(0))

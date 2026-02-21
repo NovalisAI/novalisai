@@ -26,7 +26,7 @@ export function PricingItem({
   isMobile,
 }: Props) {
   return (
-    <div className="rounded-xl bg-white py-12 px-8">
+    <div className="rounded-xl bg-surface py-12 px-8">
       <div className="mb-4 flex items-center gap-1">
         <div className="flex h-8 w-8 items-center justify-center">
           {icon === "free" && (
@@ -60,7 +60,7 @@ export function PricingItem({
         <div className="flex items-center gap-2">
           <p className="heading-6 font-bold uppercase">{title}</p>
           {popular && (
-            <h6 className="rounded-full bg-[#42B883] px-4 py-0.5 text-white font-semibold">
+            <h6 className="rounded-full bg-[#42B883] px-4 py-0.5 text-surface font-semibold">
               {popular}
             </h6>
           )}
@@ -96,7 +96,7 @@ export function PricingItem({
       <p className="heading-6 mb-4 text-[#6B6B90]">{description}</p>
 
       <Button
-        className="mb-6 rounded-full w-full heading-6 text-white"
+        className="mb-6 rounded-full w-full heading-6 text-surface"
         asChild
         variant="primary"
         data-gumroad-single-product="true"

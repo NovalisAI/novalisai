@@ -27,10 +27,10 @@ export default function License() {
             <li
               key={page}
               className={cn(
-                "hover:bg-primary/90 hover:text-white rounded-full cursor-pointer py-2 px-6 my-2 mx-4",
+                "hover:bg-primary/90 hover:text-surface rounded-full cursor-pointer py-2 px-6 my-2 mx-4",
                 {
-                  "bg-primary text-white": selected === i,
-                }
+                  "bg-primary text-surface": selected === i,
+                },
               )}
               onClick={() => {
                 setSelected(i);
@@ -55,10 +55,10 @@ export default function License() {
                 key={page}
                 className={cn(
                   "heading-6",
-                  "hover:bg-primary hover:text-white rounded-full cursor-pointer py-2 px-6 my-2 mx-4",
+                  "hover:bg-primary hover:text-surface rounded-full cursor-pointer py-2 px-6 my-2 mx-4",
                   {
-                    "bg-primary text-white": selected === i,
-                  }
+                    "bg-primary text-surface": selected === i,
+                  },
                 )}
                 onClick={() => {
                   setSelected(i);

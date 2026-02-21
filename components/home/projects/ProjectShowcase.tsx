@@ -11,9 +11,9 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { getBestProjects } from "@/lib/projects";
+import { getProjectsBySlugs } from "@/lib/projects";
 
-const projects = getBestProjects();
+const projects = getProjectsBySlugs(["capi"]);
 
 const ProjectShowcase: React.FC = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -196,7 +196,7 @@ const ProjectShowcase: React.FC = () => {
                     </Button>
                   </div>
 
-                  <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-md text-white text-xs font-medium rounded-full border border-white/10">
+                  <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-md text-surface text-xs font-medium rounded-full border border-white/10">
                     {activeImageIndex + 1} / {project.gallery.length}
                   </div>
                 </div>

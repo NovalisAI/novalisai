@@ -12,7 +12,7 @@ export default function CategoryItem({ category, index }: Props) {
       style={{
         animationDelay: `calc(30s / 8 * (8 - ${index}) * -1)`,
       }}
-      className="w-72 flex flex-row gap-4 p-4 rounded-lg bg-white"
+      className="w-72 flex flex-row gap-4 p-4 rounded-lg bg-surface"
     >
       <div className="flex justify-center items-center">
         <Image

@@ -688,10 +688,10 @@ export const projects: Project[] = [
 
 export const getAllProjects = () => projects;
 
-export const getBestProjects = () => [...projects].slice(0, 4);
-
+export const getProjectsBySlugs = (slugs: string[]) =>
+  slugs.map(getProjectBySlug);
 export const getProjectBySlug = (slug: string) => {
-  return projects.find((project) => project.slug === slug);
+  return projects.find((project) => project.slug === slug)!;
 };
 
 export const getProjectsByCategory = (category: ProjectCategory) => {

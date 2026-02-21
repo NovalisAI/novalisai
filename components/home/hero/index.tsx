@@ -3,11 +3,11 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import FloatingIcons from "./FloatingIcons";
-import PartnersSlider from "./PartnersSlider";
+import { motion, Variants } from "framer-motion";
+import { FloatingProjects } from "./FloatingProjects";
+import { getProjectsBySlugs } from "@/lib/projects";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -18,7 +18,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -28,26 +28,37 @@ const itemVariants = {
 };
 
 export default function Hero() {
+  const featuredProjects = getProjectsBySlugs([
+    "capi",
+    "capi",
+    "capi",
+    "capi",
+    "capi",
+    "capi",
+  ]).map((project) => project.image);
   return (
     <header className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex flex-col justify-between pb-12 md:pb-16 lg:pb-20">
-      <FloatingIcons />
+      <FloatingProjects
+        projects={featuredProjects}
+        radiusX={625}
+        radiusY={310}
+        mobileRadiusX={180}
+        mobileRadiusY={140}
+        imageWidth={130}
+        imageHeight={100}
+        mobileImageWidth={60}
+        mobileImageHeight={45}
+        animationDuration={60}
+        className="translate-x-12"
+      />
       <motion.div
         className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pt-12 md:pt-16"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.div variants={itemVariants} className="mb-8">
-          <div className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-            <p className="text-sm font-semibold text-primary">
-              Innovation at Scale
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Headline */}
         <motion.div variants={itemVariants} className="mb-6 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+          <h1 className="text-3xl md:text-4xl lg:text-[50px] font-bold leading-tight text-foreground">
             Transform Your Vision Into
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">
               Reality with Novalis AI
@@ -55,7 +66,6 @@ export default function Hero() {
           </h1>
         </motion.div>
 
-        {/* Subheadline */}
         <motion.div variants={itemVariants} className="mb-12 max-w-2xl">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Enterprise solutions powered by cutting-edge AI, VR technology, and
@@ -63,7 +73,6 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
@@ -124,16 +133,6 @@ export default function Hero() {
             <span className="font-medium">24/7 Support</span>
           </div>
         </motion.div>
-      </motion.div>
-
-      {/* Partners Slider */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="relative z-10"
-      >
-        <PartnersSlider />
       </motion.div>
     </header>
   );

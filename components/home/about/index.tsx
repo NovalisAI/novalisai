@@ -23,7 +23,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-surface"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -48,7 +48,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-surface"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -71,7 +71,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-surface"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -96,7 +96,7 @@ export default function About() {
             <Button
               asChild
               variant="default"
-              className="w-full sm:w-auto heading-6 rounded-full text-white"
+              className="w-full sm:w-auto heading-6 rounded-full text-surface"
             >
               <Link href="/#pricing">Get Started</Link>
             </Button>
@@ -116,7 +116,7 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl" />
             <div className="relative bg-gradient-to-br from-accent to-white rounded-3xl p-12 border border-border">
               <div className="space-y-8">
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border">
+                <div className="flex items-center gap-4 p-6 bg-surface rounded-2xl border border-border">
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-8 h-8 text-primary"
@@ -139,7 +139,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border">
+                <div className="flex items-center gap-4 p-6 bg-surface rounded-2xl border border-border">
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-8 h-8 text-primary"
@@ -157,7 +157,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-border">
+                <div className="flex items-center gap-4 p-6 bg-surface rounded-2xl border border-border">
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-8 h-8 text-primary"

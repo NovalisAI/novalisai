@@ -4,7 +4,7 @@ import React from "react";
 
 export default function ComingSoon() {
   return (
-    <div className={cn("bg-primary text-white rounded-xl py-10 px-8")}>
+    <div className={cn("bg-primary text-surface rounded-xl py-10 px-8")}>
       <Image
         src={"/assets/light-style-zappicon.png"}
         alt={"coming-soon-style-zappicon"}
@@ -16,7 +16,9 @@ export default function ComingSoon() {
       />
       <div className="w-full h-px transparent my-8" />
       <p className="heading-6 font-bold uppercase mb-4">{"Coming Soon..."}</p>
-      <p className='heading-6'>{"An inspiring new style coming soon to elevate your designs."}</p>
+      <p className="heading-6">
+        {"An inspiring new style coming soon to elevate your designs."}
+      </p>
     </div>
   );
 }

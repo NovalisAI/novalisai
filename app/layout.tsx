@@ -3,7 +3,6 @@ import { Be_Vietnam_Pro } from "next/font/google";
 
 import "@/styles/globals.css";
 import { Suspense } from "react";
-import Scripts from "@/components/Scripts";
 
 export const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
@@ -99,10 +98,6 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <head>
-        <Scripts />
-      </head>
-
       <body className={`antialiased ${beVietnamPro.className}`}>
         <Suspense>{children}</Suspense>
       </body>

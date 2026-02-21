@@ -83,13 +83,13 @@ export default function Navbar() {
           <Button
             variant="primary"
             asChild
-            className="hidden lg:flex px-5 heading-6 font-semibold items-center gap-2 transition-all duration-300 rounded-full text-white"
+            className="hidden lg:flex px-5 heading-6 font-semibold items-center gap-2 transition-all duration-300 rounded-full text-surface"
           >
             <Link
               href="https://www.figma.com/design/sir3dwEd5hn1Z8K3hZnGYi/Zappicon--Preview----Your-Shortcut-to-Smarter-Icons"
               target="_blank"
             >
-              <span>Live Preview</span>
+              <span className="text-background">Live Preview</span>
             </Link>
           </Button>
         </div>

@@ -205,7 +205,7 @@ export default function ContactPage() {
 
           <Button
             type="submit"
-            className="w-full h-12 bg-primary hover:bg-primary/90 transition-colors font-bold rounded-full text-white"
+            className="w-full h-12 bg-primary hover:bg-primary/90 transition-colors font-bold rounded-full text-surface"
             disabled={isPending}
           >
             {!(isSuccess && !isError) ? (
