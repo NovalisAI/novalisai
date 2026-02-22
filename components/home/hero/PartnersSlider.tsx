@@ -11,14 +11,14 @@ interface Partner {
 }
 
 const partners: Partner[] = [
-  { id: 1, name: "Tech Corp", logo: "/assets/figma-file.svg" },
-  { id: 2, name: "Design Studio", logo: "/assets/grid-category.svg" },
-  { id: 3, name: "Digital Agency", logo: "/assets/building-zappicon.png" },
-  { id: 4, name: "Innovation Lab", logo: "/assets/iconjar-file.svg" },
+  { id: 1, name: "Security", logo: "/assets/internet-security.svg" },
+  { id: 2, name: "Cloud", logo: "/assets/cloud.svg" },
+  { id: 3, name: "UI/UX", logo: "/assets/figma.svg" },
+  { id: 4, name: "AI", logo: "/assets/ai.svg" },
   {
     id: 6,
-    name: "AI Solutions",
-    logo: "/assets/browser-terminal-zappicon.png",
+    name: "Analytics",
+    logo: "/assets/analytics.svg",
   },
 ];
 
@@ -33,8 +33,12 @@ export default function PartnersSlider() {
   return (
     <div className="py-6">
       <div className="text-center mb-14">
-        <p className="heading-6 text-muted-foreground font-semibold">
-          TRUSTED BY LEADING COMPANIES
+        <p className="heading-5 text-foreground font-semibold">
+          Product-level standards. Real delivery
+        </p>
+        <p className="heading-6 text-muted-foreground font-semibold max-w-2/3 mx-auto">
+          Clean architecture, strong UX, secure systems, and fast iterations
+          with a process designed for reliability.
         </p>
       </div>
 
@@ -66,15 +70,14 @@ export default function PartnersSlider() {
             setPauseAnimation(false);
           }}
         >
-          {/* Infinite scrolling logos */}
           {infinitePartners.map((partner, index) => (
             <motion.div
               key={`${partner.id}-${index}`}
-              className="flex-shrink-0 w-24 h-16 md:w-28 md:h-20 flex items-center justify-center"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-3"
               whileHover={{ scale: isDragging ? 1 : 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-full group cursor-grab active:cursor-grabbing">
+              <div className="relative w-16 h-12 md:w-20 md:h-14 group cursor-grab active:cursor-grabbing">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
@@ -82,13 +85,15 @@ export default function PartnersSlider() {
                   className="object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0"
                 />
               </div>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">
+                {partner.name}
+              </span>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Gradient overlays for edge effect */}
-        <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10" />
-        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10" />
+        <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-background via-background/80 to-transparent pointer-events-none z-10" />
+        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-background via-background/80 to-transparent pointer-events-none z-10" />
       </div>
     </div>
   );

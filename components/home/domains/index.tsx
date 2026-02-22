@@ -12,10 +12,9 @@ export default function Domains() {
   return (
     <div className="py-24">
       <div className="flex flex-col items-center justify-center mb-24">
-        <h2 className="heading-2 font-bold mb-4 text-center">What We Do</h2>
+        <h2 className="heading-2 font-bold mb-4 text-center">What we build</h2>
         <p className="heading-6 mb-4 text-center text-muted-foreground max-w-150">
-          We specialize in designing and developing innovative solutions across
-          multiple domains, empowering businesses to succeed in the digital era.
+          End-to-end delivery: software, AI integration, and scalable platforms.
         </p>
       </div>
 
@@ -31,37 +30,37 @@ export default function Domains() {
 export const domains: Domain[] = [
   {
     id: 1,
-    title: "Development",
+    title: "Custom Development",
     description:
-      "Custom software development and web applications built with modern technologies and best practices.",
-    icon: "/assets/browser-terminal-zappicon.png",
+      "Web apps, dashboards, portals, and SaaS platforms built for performance and scale.",
+    icon: "/assets/dev.svg",
   },
   {
     id: 2,
-    title: "Enterprise Digitalization",
+    title: "SME Digitalization",
     description:
-      "Transform your business operations with comprehensive digital solutions tailored to enterprise needs.",
-    icon: "/assets/building-zappicon.png",
+      "Internal tools for operations: planning, reporting, HR, finance, workflows.",
+    icon: "/assets/digital.svg",
   },
   {
     id: 3,
-    title: "VR Simulations",
+    title: "AI Integration",
     description:
-      "Immersive virtual reality experiences designed to train, educate, and engage users in innovative ways.",
-    icon: "/assets/cube-simple-zappicon.png",
+      "AI automation, assistants, document processing, intelligent search integrated into your tools.",
+    icon: "/assets/ai-integration.svg",
   },
   {
     id: 4,
-    title: "Artificial Intelligence",
+    title: "Data & Analytics",
     description:
-      "Cutting-edge AI solutions that leverage machine learning to automate and optimize business processes.",
-    icon: "/assets/sparkles-zappicon.png",
+      "KPIs, dashboards, forecasting, pipelines turn data into decisions",
+    icon: "/assets/data.svg",
   },
   {
     id: 5,
-    title: "Platform Solutions",
+    title: "Platform & Cloud",
     description:
-      "Scalable platforms designed to solve complex challenges and drive growth across industries.",
-    icon: "/assets/grid-four-zappicon.png",
+      "APIs, authentication, roles & permissions, cloud deployment, monitoring, maintenance",
+    icon: "/assets/cloud-plateform.svg",
   },
 ];

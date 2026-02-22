@@ -12,7 +12,7 @@ export default function HomeLayout({
       <Navbar />
       <main className="md:pt-20">
         {children}
-        <Container type="intrinsic" className="bg-accent">
+        <Container type="intrinsic">
           <Footer />
         </Container>
       </main>

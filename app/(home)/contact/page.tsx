@@ -3,6 +3,18 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Mail,
+  MessageSquare,
+  MapPin,
+  Phone,
+  Send,
+  Loader2,
+  Sparkles,
+} from "lucide-react";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +22,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -21,23 +34,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { GradientText } from "@/components/ui/gradient-text";
+import { Toaster } from "@/components/ui/sonner";
 
-import Image from "next/image";
 import { contactSchema } from "@/lib/validators/contact.schema";
 import MessageSent from "@/components/contact/MessageSent";
-import { AnimatePresence } from "motion/react";
 import { useMutate } from "@/hooks/use-mutation";
-import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
 import { EMail } from "@/types";
-import { useEffect } from "react";
 
 const subjects = [
-  { value: "general", label: "General" },
-  { value: "support", label: "Technical Support" },
-  { value: "partnership", label: "Partnership Opportunity" },
-  { value: "request", label: "Request Custom Icons" },
+  { value: "ai-solutions", label: "Artificial Intelligence Solutions" },
+  { value: "vr-ar", label: "VR / AR Virtual Reality Lab" },
+  { value: "enterprise", label: "Enterprise Software & Cloud" },
+  { value: "partnership", label: "Strategic Partnership" },
+  { value: "general", label: "General Business Inquiry" },
 ];
 
 export default function ContactPage() {
@@ -56,179 +65,231 @@ export default function ContactPage() {
     isPending,
     isSuccess,
     isError,
-  } = useMutate<EMail>("https://zappicon.com/mail.php");
+    error,
+  } = useMutate<EMail>("/api/contact");
 
   useEffect(() => {
-    let toastId: string | number | null = null;
-
     if (isPending) {
-      toastId = toast.loading("Sending email...");
-    } else {
-      if (toastId !== null) {
-        toast.dismiss(toastId);
-      }
+      toast.loading("Sending transmission...", { id: "contact-form" });
+    } else if (isSuccess) {
+      toast.success("Transmission received!", { id: "contact-form" });
+    } else if (isError) {
+      toast.error(error || "Transmission failed", { id: "contact-form" });
     }
-
-    return () => {
-      if (toastId !== null) toast.dismiss(toastId);
-    };
-  }, [isPending]);
+  }, [isPending, isSuccess, isError, error]);
 
   async function onSubmit(values: z.infer<typeof contactSchema>) {
-    const { name, from, message, subject } = values;
-
     try {
-      await sendMail({ name, from, message, subject });
-
+      await sendMail(values as EMail);
       form.reset();
-
-      /* typescript-eslint-disable no-implicit-any */
-    } catch (error: any) {
-      toast.error("Network error occured when sending mail");
-    }
+    } catch (err) {}
   }
 
   if (isSuccess) {
     return (
       <AnimatePresence>
-        <MessageSent />
+        <div className="min-h-[60vh] flex items-center justify-center">
+          <MessageSent />
+        </div>
       </AnimatePresence>
     );
   }
 
   return (
-    <div className="py-24 space-y-12">
-      <Toaster />
-      <div className="flex flex-col space-y-4">
-        <GradientText className="heading-3 font-bold text-center">
-          We&apos;re Excited To Hear From You!
-        </GradientText>
-        <div>
-          <h6 className="text-center">
-            Whether you have questions, feedback, or need support.
-          </h6>
-          <h6 className="text-center">
-            Reach out to us via the website form or directly through from:
-          </h6>
-        </div>
-        <a
-          href="mailto:support@zappicon.com"
-          className="font-medium inline-block text-center hover:underline"
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+      <Toaster theme="dark" position="bottom-right" />
+
+      {/* Background radial gradient for depth */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,#1a1a1a,black)] -z-10" />
+
+      <main className="max-w-4xl mx-auto px-6 py-24 md:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 space-y-4"
         >
-          support@zappicon.com
-        </a>
-      </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-foreground/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
+            <Sparkles className="w-3 h-3" />
+            <span>Contact Novalis AI</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+            Let&apos;s Start a{" "}
+            <span className="text-primary italic">Dialogue</span>.
+          </h1>
+          <p className="text-lg text-foreground/50 max-w-xl mx-auto leading-relaxed">
+            Reach out to our laboratory. We typically respond within 12 hours.
+          </p>
+        </motion.div>
 
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    placeholder="Name"
-                    className="h-12 rounded-full bg-accent placeholder:text-muted-foreground"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+          {[
+            {
+              icon: Mail,
+              label: "Email",
+              value: "hello@novalisai.com",
+              href: "mailto:hello@novalisai.com",
+            },
+            {
+              icon: Phone,
+              label: "Phone",
+              value: "+32 474 32 77 03",
+              href: "tel:+32474327703",
+            },
+            {
+              icon: MapPin,
+              label: "Office",
+              value: "Louvain-la-Neuve, 1348, Belgium",
+              href: "",
+            },
+          ].map((item, i) => (
+            <motion.a
+              key={item.label}
+              href={item.href}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * i + 0.5 }}
+              className="flex flex-col text-center items-center p-8 rounded-3xl bg-foreground/5 border border-foreground/10 hover:bg-foreground/[0.08] transition-all group"
+            >
+              <item.icon className="w-6 h-6 text-primary mb-4 group-hover:scale-110 transition-transform" />
+              <span className="text-xs font-bold text-foreground/40 uppercase tracking-widest mb-1">
+                {item.label}
+              </span>
+              <span className="text-sm font-medium">{item.value}</span>
+            </motion.a>
+          ))}
+        </div>
 
-          <FormField
-            control={form.control}
-            name="from"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    placeholder="Email"
-                    type="text"
-                    className="h-12 rounded-full bg-accent placeholder:text-muted-foreground"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="bg-foreground/5 border border-foreground/10 p-8 md:p-12 rounded-[40px] shadow-2xl relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 p-8 text-primary/10 -z-0">
+            <MessageSquare className="w-32 h-32" />
+          </div>
 
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <FormControl>
-                    <SelectTrigger className="w-full rounded-full bg-accent">
-                      <SelectValue
-                        placeholder="Subject"
-                        className="text-muted-foreground"
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-8 relative z-10"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground/60 font-medium">
+                        Full Name
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="John Doe"
+                          className="h-14 bg-foreground/5 border-foreground/10 focus:border-primary focus:ring-0 rounded-2xl text-base px-6 transition-all"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="from"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground/60 font-medium">
+                        Email Address
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="john@example.com"
+                          type="email"
+                          className="h-14 bg-foreground/5 border-foreground/10 focus:border-primary focus:ring-0 rounded-2xl text-base px-6 transition-all"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <FormField
+                control={form.control}
+                name="subject"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-foreground/60 font-medium">
+                      Subject of Inquiry
+                    </FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="h-14 bg-foreground/5 border-foreground/10 focus:border-primary focus:ring-0 rounded-2xl text-base px-6">
+                          <SelectValue placeholder="Select a topic" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent className="border-foreground/10 rounded-2xl text-foreground">
+                        {subjects.map((s) => (
+                          <SelectItem
+                            key={s.value}
+                            value={s.value}
+                            className="focus:bg-foreground/10 hover:bg-foreground/5 cursor-pointer rounded-xl py-3"
+                          >
+                            {s.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-foreground/60 font-medium">
+                      Message Detail
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Tell us about your project or inquiry..."
+                        className="min-h-[160px] bg-foreground/5 border-foreground/10 focus:border-primary focus:ring-0 rounded-2xl text-base p-6 resize-none transition-all"
+                        {...field}
                       />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {subjects.map((subject) => (
-                      <SelectItem key={subject.value} value={subject.value}>
-                        {subject.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Textarea
-                    placeholder="Message..."
-                    className="min-h-50 rounded-lg bg-accent placeholder:text-muted-foreground p-4 resize-none"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <Button
-            type="submit"
-            className="w-full h-12 bg-primary hover:bg-primary/90 transition-colors font-bold rounded-full text-surface"
-            disabled={isPending}
-          >
-            {!(isSuccess && !isError) ? (
-              <Image
-                src="/assets/send-launch-w.svg"
-                width={20}
-                height={20}
-                className="invert"
-                alt="Send"
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            ) : (
-              <Image
-                src="/assets/loading.svg"
-                alt="loading"
-                width={20}
-                height={20}
-                className="animate-spin"
-              />
-            )}{" "}
-            SEND
-          </Button>
-        </form>
-      </Form>
+
+              <Button
+                type="submit"
+                disabled={isPending}
+                className="w-full h-16 bg-primary hover:bg-primary/90 text-foreground font-bold rounded-2xl text-lg shadow-xl shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
+              >
+                {isPending ? (
+                  <Loader2 className="w-6 h-6 animate-spin" />
+                ) : (
+                  <span className="flex text-background items-center gap-3">
+                    Send Message
+                    <Send className="w-5 h-5" />
+                  </span>
+                )}
+              </Button>
+            </form>
+          </Form>
+        </motion.div>
+      </main>
     </div>
   );
 }

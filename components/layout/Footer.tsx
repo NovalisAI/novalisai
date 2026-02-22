@@ -1,133 +1,140 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/novalisai/about/",
+    icon: Linkedin,
+  },
+];
+
+const footerSections = [
+  {
+    title: "Company",
+    links: [
+      { name: "About Us", href: "/about" },
+      { name: "Our Process", href: "/process" },
+      { name: "Projects", href: "/projects" },
+      { name: "Careers", href: "/careers" },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      { name: "AI Solutions", href: "/services/ai" },
+      { name: "Web Development", href: "/services/web" },
+      { name: "VR/AR Lab", href: "/services/vr" },
+      { name: "Consulting", href: "/services/consulting" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { name: "Documentation", href: "/docs" },
+      { name: "Brand Assets", href: "/brand" },
+      { name: "Updates", href: "/updates" },
+      { name: "Privacy Policy", href: "/privacy" },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="pt-12 md:pt-24 pb-6 md:pb-8 space-y-12 md:space-y-24">
-      <div className="flex flex-col md:flex-row gap-10 md:gap-0">
-        <div className="w-full md:flex-1">
-          <div className="max-w-full md:max-w-2/3">
-            <p className="text-3xl">NovalisAI</p>
-            <h6 className="mt-4 md:mt-6 mb-6 md:mb-8">
-              Free & Premium Clean & Consistent Icons for Seamless UI.
-            </h6>
-            <div className="flex flex-wrap gap-2">
-              {links.map((link) => (
+    <footer className="relative mt-24 border-t border-white/5 bg-background pt-24 pb-12 overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 translate-x-1/2 translate-y-1/2" />
+
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 pb-20">
+          {/* Brand Column */}
+          <div className="lg:col-span-5 space-y-8">
+            <Link href="/" className="inline-block">
+              <span className="text-2xl font-bold tracking-tighter text-foreground">
+                Novalis<span className="text-primary">AI</span>
+              </span>
+            </Link>
+            <p className="text-lg text-muted-foreground max-w-sm leading-relaxed">
+              We engineer the digital landscape of tomorrow. From cognitive AI
+              systems to immersive immersive VR experiences, we transform
+              complexity into elegant solutions.
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
                 <Link
-                  key={link.name}
-                  target="_blank"
-                  href={link.href}
-                  className="bg-foreground transition-all hover:bg-primary w-8 h-8 flex items-center justify-center rounded-full"
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
                 >
-                  <Image
-                    src={link.image || "/placeholder.svg"}
-                    width={16}
-                    height={16}
-                    alt={link.name}
-                  />
+                  <social.icon className="w-5 h-5" />
                 </Link>
               ))}
             </div>
           </div>
+
+          {/* Links Columns */}
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-8">
+            {footerSections.map((section) => (
+              <div key={section.title} className="space-y-6">
+                <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white/50">
+                  {section.title}
+                </h4>
+                <ul className="space-y-4">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center group"
+                      >
+                        {link.name}
+                        <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-wrap md:flex-1 gap-8 md:gap-0">
-          {Object.entries(sections).map(([key, values]) => (
-            <div
-              key={key}
-              className="space-y-4 md:space-y-6 w-full sm:w-1/2 md:flex-1"
+        {/* Bottom Bar */}
+        <div className="pt-8 mt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Mail className="w-4 h-4 text-primary" />
+            <span>hello@novalisai.com</span>
+          </div>
+
+          <div className="text-sm text-muted-foreground font-medium">
+            © {new Date().getFullYear()} NovalisAI Laboratory. Built by
+            visionaries.
+          </div>
+
+          <div className="flex gap-8 text-sm">
+            <Link
+              href="/terms"
+              className="text-muted-foreground hover:text-white transition-colors"
             >
-              <h6 className="font-semibold">{key.toUpperCase()}</h6>
-              <ul className="space-y-2 md:space-y-3 flex flex-col">
-                {values.map((value) => (
-                  <Link
-                    key={value.name}
-                    className="hover:font-semibold w-fit text-sm md:text-base"
-                    href={value.href}
-                  >
-                    {value.name}
-                  </Link>
-                ))}
-              </ul>
-            </div>
-          ))}
+              Terms
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-muted-foreground hover:text-white transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/cookies"
+              className="text-muted-foreground hover:text-white transition-colors"
+            >
+              Cookies
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div className="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-gray-200 dark:border-gray-800 text-xs md:text-sm">
-        <h6 className="flex gap-2 items-center">
-          <Image
-            src="/assets/send-launch.svg"
-            width={20}
-            height={20}
-            alt="Send"
-          />
-          <span>support@zappicon.com</span>
-        </h6>
-
-        <h6>© {new Date().getFullYear()} Zappicon. All rights reserved.</h6>
       </div>
     </footer>
   );
 }
-
-const links = [
-  {
-    name: "Instagram",
-    image: "/assets/instagram.svg",
-    href: "https://www.instagram.com/zappicon",
-  },
-  {
-    name: "X",
-    image: "/assets/x-twitter.svg",
-    href: "https://x.com/ZappiconLabs",
-  },
-  {
-    name: "Threads",
-    image: "/assets/threads.svg",
-    href: "https://www.threads.com/@zappicon",
-  },
-  {
-    name: "dribbble",
-    image: "/assets/dribbble.svg",
-    href: "https://dribbble.com/zappicon",
-  },
-  {
-    name: "Facebook",
-    image: "/assets/facebook-f.svg",
-    href: "https://facebook.com/ZappiconLabs",
-  },
-];
-
-const sections = {
-  company: [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "Pricing",
-      href: "/#pricing",
-    },
-  ],
-  help: [
-    {
-      name: "Support",
-      href: "/contact",
-    },
-    {
-      name: "FAQs",
-      href: "/#faq",
-    },
-  ],
-  info: [
-    {
-      name: "License",
-      href: "/license",
-    },
-    {
-      name: "Updates",
-      href: "/updates",
-    },
-  ],
-};

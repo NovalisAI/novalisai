@@ -95,7 +95,6 @@ const ProjectShowcase: React.FC = () => {
                       : "bg-transparent border-transparent hover:bg-secondary/50 hover:border-border"
                   }`}
                 >
-                  {/* Active Indicator Line */}
                   {activeProject === index && (
                     <motion.div
                       layoutId="activeIndicator"

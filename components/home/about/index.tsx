@@ -7,15 +7,15 @@ export default function About() {
   return (
     <div className="py-24">
       <div className="flex flex-col lg:flex-row gap-16 items-center">
-        {/* Left side - Content */}
         <div className="flex-1 lg:max-w-lg">
-          <h2 className="heading-2 font-bold mb-6">About Our Company</h2>
+          <h2 className="heading-2 font-bold mb-6">About NovalisAI</h2>
 
           <div className="space-y-6 mb-8">
             <p className="heading-6 text-muted-foreground leading-relaxed">
-              Founded in 2020, we started with a simple mission: to create
-              beautiful, functional tools that empower designers and developers
-              to build exceptional digital experiences.
+              NovalisAI is a development agency helping SMEs modernize
+              operations through clean software and practical AI. We build
+              maintainable systems designed for real usage and we run an
+              Innovation Lab to prototype advanced optimization and analytics.
             </p>
           </div>
 
@@ -36,11 +36,11 @@ export default function About() {
               </div>
               <div>
                 <h4 className="heading-5 font-bold mb-1">
-                  Quality First Approach
+                  Quality-First Engineering
                 </h4>
                 <p className="heading-6 text-muted-foreground">
-                  Every product is crafted with attention to detail and a
-                  commitment to excellence.
+                  Clean architecture, testing strategy, documentation, scalable
+                  design.
                 </p>
               </div>
             </div>
@@ -60,10 +60,10 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4 className="heading-5 font-bold mb-1">Community Focused</h4>
+                <h4 className="heading-5 font-bold mb-1">SME Digitalization</h4>
                 <p className="heading-6 text-muted-foreground">
-                  We listen to our users and continuously improve based on real
-                  feedback.
+                  We replace spreadsheets and manual workflows with secure
+                  internal platforms.
                 </p>
               </div>
             </div>
@@ -83,10 +83,10 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4 className="heading-5 font-bold mb-1">Innovation Driven</h4>
+                <h4 className="heading-5 font-bold mb-1">Practical AI</h4>
                 <p className="heading-6 text-muted-foreground">
-                  We embrace new technologies and methodologies to stay ahead of
-                  the curve.
+                  Automation, copilots, document intelligence, and analytics
+                  grounded in business needs.
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function About() {
             <Button
               asChild
               variant="default"
-              className="w-full sm:w-auto heading-6 rounded-full text-surface"
+              className="w-full sm:w-auto heading-6 rounded-full text-background"
             >
               <Link href="/#pricing">Get Started</Link>
             </Button>
@@ -110,7 +110,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right side - Visual */}
         <div className="flex-1 w-full">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-3xl" />
@@ -132,9 +131,9 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">4+</p>
+                    <p className="text-xl font-bold">Fast Scoping (48h)</p>
                     <p className="heading-6 text-muted-foreground">
-                      Years of Excellence
+                      Roadmap, milestones, and a clear first step
                     </p>
                   </div>
                 </div>
@@ -150,9 +149,9 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">10K+</p>
+                    <p className="text-xl font-bold">Weekly Delivery</p>
                     <p className="heading-6 text-muted-foreground">
-                      Satisfied Users
+                      Weekly demos + transparent progress
                     </p>
                   </div>
                 </div>
@@ -168,9 +167,9 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">5.0★</p>
+                    <p className="text-xl font-bold">Production-Ready</p>
                     <p className="heading-6 text-muted-foreground">
-                      User Rating
+                      Security, deployment, monitoring, handover-ready code
                     </p>
                   </div>
                 </div>

@@ -8,12 +8,8 @@ interface FloatingProjectsProps {
   className?: string;
   radiusX?: number;
   radiusY?: number;
-  mobileRadiusX?: number;
-  mobileRadiusY?: number;
   imageWidth?: number;
   imageHeight?: number;
-  mobileImageWidth?: number;
-  mobileImageHeight?: number;
   animationDuration?: number;
 }
 
@@ -52,6 +48,18 @@ const ProjectItem = ({
     angle,
     (a) => radiusY - radiusY * Math.cos(a) - height / 2,
   );
+
+  // Depth effect: smaller and more blurred when at the "back" (top of the orbit)
+  const scale = useTransform(angle, (a) => {
+    const cos = Math.cos(a);
+    return 1 + cos * 0.15; // Scale between 0.85 and 1.15
+  });
+
+  const opacity = useTransform(angle, (a) => {
+    const cos = Math.cos(a);
+    return 0.7 + cos * 0.3; // Opacity between 0.4 and 1.0
+  });
+
   const zIndex = useTransform(y, (val) => Math.round(val));
 
   return (
@@ -63,15 +71,17 @@ const ProjectItem = ({
         width: width,
         height: height,
         zIndex,
+        scale,
+        opacity,
       }}
     >
       <motion.div
-        className="group relative h-full w-full overflow-hidden rounded-2xl bg-white/5 shadow-xl shadow-black/30 ring-1 ring-white/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:ring-white/40"
+        className="group relative h-full w-full overflow-hidden rounded-2xl bg-white/5 shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur-md transition-all duration-500 hover:scale-110 hover:ring-primary/40"
         animate={{
-          y: [0, -10, 0],
+          y: [0, -8, 0],
         }}
         transition={{
-          duration: 3 + Math.random() * 2,
+          duration: 4 + (index % 3),
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -81,9 +91,12 @@ const ProjectItem = ({
           alt={`Project ${index + 1}`}
           fill
           sizes={`${width}px`}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-white/[0.12] to-transparent" />
+        {/* Glossy overlay */}
+        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-50" />
+        {/* Subtle shadow glow when at front */}
+        <div className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]" />
       </motion.div>
     </motion.div>
   );
@@ -94,12 +107,8 @@ export const FloatingProjects = ({
   className = "",
   radiusX = 350,
   radiusY = 250,
-  mobileRadiusX = 180,
-  mobileRadiusY = 140,
   imageWidth = 64,
   imageHeight = 48,
-  mobileImageWidth = 44,
-  mobileImageHeight = 33,
   animationDuration = 30,
 }: FloatingProjectsProps) => {
   const items = projects.slice(0, 8);
@@ -111,11 +120,12 @@ export const FloatingProjects = ({
       aria-hidden="true"
     >
       <div
-        className="relative hidden md:block"
+        className="relative"
         style={{ width: radiusX * 2, height: radiusY * 2 }}
       >
+        {/* Orbit Path - Subtle Glow */}
         <svg
-          className="absolute inset-0 h-full w-full overflow-visible"
+          className="absolute inset-0 h-full w-full overflow-visible opacity-20"
           style={{ width: radiusX * 2, height: radiusY * 2 }}
         >
           <ellipse
@@ -123,7 +133,7 @@ export const FloatingProjects = ({
             cy={radiusY}
             rx={radiusX}
             ry={radiusY}
-            className="fill-none stroke-white/5 stroke-1"
+            className="fill-none stroke-primary/30 stroke-[0.5]"
           />
         </svg>
 
@@ -138,39 +148,6 @@ export const FloatingProjects = ({
             width={imageWidth}
             height={imageHeight}
             duration={animationDuration}
-          />
-        ))}
-      </div>
-
-      {/* Mobile Orbit */}
-      <div
-        className="relative block md:hidden"
-        style={{ width: mobileRadiusX * 2, height: mobileRadiusY * 2 }}
-      >
-        <svg
-          className="absolute inset-0 h-full w-full overflow-visible"
-          style={{ width: mobileRadiusX * 2, height: mobileRadiusY * 2 }}
-        >
-          <ellipse
-            cx={mobileRadiusX}
-            cy={mobileRadiusY}
-            rx={mobileRadiusX}
-            ry={mobileRadiusY}
-            className="fill-none stroke-white/5 stroke-1"
-          />
-        </svg>
-
-        {items.map((src, i) => (
-          <ProjectItem
-            key={i}
-            src={src}
-            index={i}
-            total={count}
-            radiusX={mobileRadiusX}
-            radiusY={mobileRadiusY}
-            width={mobileImageWidth}
-            height={mobileImageHeight}
-            duration={animationDuration * 0.8}
           />
         ))}
       </div>

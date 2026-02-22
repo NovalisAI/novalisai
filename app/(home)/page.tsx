@@ -5,11 +5,13 @@ import Team from "@/components/home/team";
 import Domains from "@/components/home/domains";
 import Projects from "@/components/home/projects";
 import About from "@/components/home/about";
+import Process from "@/components/home/process";
+import InnovationLab from "@/components/home/lab";
 import PartnersSlider from "@/components/home/hero/PartnersSlider";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Container type="extrinsic">
         <Hero />
       </Container>
@@ -25,10 +27,17 @@ export default function Home() {
         <Domains />
       </Container>
       <Container type="extrinsic">
+        <Process />
+      </Container>
+      <Container type="extrinsic">
         <Team />
       </Container>
       <Container type="extrinsic" id="projects">
         <Projects />
+      </Container>
+
+      <Container type="extrinsic">
+        <InnovationLab />
       </Container>
 
       <Container

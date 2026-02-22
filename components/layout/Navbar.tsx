@@ -44,29 +44,38 @@ export default function Navbar() {
           <ul className="hidden lg:flex gap-8 lg:gap-10">
             <li className="relative group">
               <Link
-                data-text={"Overview"}
+                data-text={"Services"}
                 href="/"
                 className="relative transition-colors duration-300 hover:font-semibold after:content-[attr(data-text)] after:block after:h-0 after:overflow-hidden after:invisible after:font-semibold"
               >
-                Overview
+                Services
               </Link>
             </li>
             <li className="relative group">
               <Link
                 href="/updates"
-                data-text={"What's new?"}
+                data-text={"Projects"}
                 className="relative transition-colors duration-300 hover:font-semibold after:content-[attr(data-text)] after:block after:h-0 after:overflow-hidden after:invisible after:font-semibold"
               >
-                What's new?
+                Projects
               </Link>
             </li>
             <li className="relative group">
               <Link
-                data-text={"Pricing"}
+                data-text={"Innovation Lab"}
                 href="/#pricing"
                 className="relative transition-colors duration-300 hover:font-semibold after:content-[attr(data-text)] after:block after:h-0 after:overflow-hidden after:invisible after:font-semibold"
               >
-                Pricing
+                Innovation Lab
+              </Link>
+            </li>
+            <li className="relative group">
+              <Link
+                data-text={"Process"}
+                href="/contact"
+                className="relative transition-colors duration-300 hover:font-semibold after:content-[attr(data-text)] after:block after:h-0 after:overflow-hidden after:invisible after:font-semibold"
+              >
+                Process
               </Link>
             </li>
             <li className="relative group">
@@ -86,10 +95,10 @@ export default function Navbar() {
             className="hidden lg:flex px-5 heading-6 font-semibold items-center gap-2 transition-all duration-300 rounded-full text-surface"
           >
             <Link
-              href="https://www.figma.com/design/sir3dwEd5hn1Z8K3hZnGYi/Zappicon--Preview----Your-Shortcut-to-Smarter-Icons"
+              href="https://www.figma.com/design/sir3dwEd5hn1Z8K3hZnGYi/novalisai--Preview----Your-Shortcut-to-Smarter-Icons"
               target="_blank"
             >
-              <span className="text-background">Live Preview</span>
+              <span className="text-background">Book a Call</span>
             </Link>
           </Button>
         </div>
@@ -102,7 +111,7 @@ export default function Navbar() {
             className="flex rounded-full items-center transition-transform duration-300 hover:scale-105"
           >
             <Link
-              href="https://www.figma.com/design/sir3dwEd5hn1Z8K3hZnGYi/Zappicon--Preview----Your-Shortcut-to-Smarter-Icons"
+              href="https://www.figma.com/design/sir3dwEd5hn1Z8K3hZnGYi/novalisai--Preview----Your-Shortcut-to-Smarter-Icons"
               target="_blank"
             >
               Preview <span className="hidden sm:block">Icons</span>
@@ -119,7 +128,7 @@ export default function Navbar() {
                 <Image
                   alt="icon"
                   src={`/assets/${
-                    !isOpen ? "menu-bars-zappicon" : "xmark-zappicon"
+                    !isOpen ? "menu-bars-novalisai" : "xmark-novalisai"
                   }.svg`}
                   className="w-5 h-5"
                   width={20}
@@ -138,7 +147,7 @@ export default function Navbar() {
                     href="/"
                     className="heading-6 font-semibold transition-all duration-300 hover:text-primary hover:translate-x-1"
                   >
-                    Overview
+                    Services
                   </Link>
                   <Link
                     onClick={() => {
@@ -147,7 +156,7 @@ export default function Navbar() {
                     href="/updates"
                     className="heading-6 transition-all duration-300 hover:text-primary hover:translate-x-1"
                   >
-                    What's new?
+                    Projects
                   </Link>
                   <Link
                     onClick={() => {
@@ -157,9 +166,16 @@ export default function Navbar() {
                     scroll={false}
                     className="heading-6 transition-all duration-300 hover:text-primary hover:translate-x-1"
                   >
-                    Pricing
+                    Innovation Lab
                   </Link>
 
+                  <Link
+                    href="/contact"
+                    className="heading-6 transition-all duration-300 hover:text-primary hover:translate-x-1"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Process
+                  </Link>
                   <Link
                     href="/contact"
                     className="heading-6 transition-all duration-300 hover:text-primary hover:translate-x-1"
@@ -176,7 +192,7 @@ export default function Navbar() {
                     className="w-full transition-all duration-300 hover:shadow-lg"
                   >
                     <Link
-                      href="https://zappicon.com/#pricing"
+                      href="https://novalisai.com/#pricing"
                       className="flex items-center"
                     >
                       <Image
