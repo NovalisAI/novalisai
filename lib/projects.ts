@@ -6,7 +6,8 @@ export type ProjectCategory =
   | "AI"
   | "Mobile"
   | "Design"
-  | "SaaS";
+  | "SaaS"
+  | "VR";
 
 export interface Project {
   id: string;
@@ -495,9 +496,9 @@ export const projects: Project[] = [
     slug: "shift",
     title: "Shift",
     description:
-      "L'innovation n'est plus un hasard. Transformez vos signaux en décisions stratégiques grâce au premier OS de gestion de l'innovation certifié ISO 56002.",
+      "Innovation is no longer a matter of chance. Transform your signals into strategic decisions thanks to the first ISO 56002 certified innovation management OS.",
     longDescription:
-      "L'innovation n'est plus un hasard. Transformez vos signaux faibles en décisions stratégiques grâce au premier OS de gestion de l'innovation certifié ISO 56002. Structurez vos idées, pilotez vos initiatives et déployez une culture d'innovation alignée sur la norme internationale ISO 56002.",
+      "Innovation is no longer a matter of chance. Transform your weak signals into strategic decisions thanks to the first ISO 56002 certified innovation management OS. Structure your ideas, drive your initiatives, and deploy an innovation culture aligned with the international ISO 56002 standard.",
     category: "SaaS",
     tags: ["Startup", "SaaS", "Development"],
     image: "/realisations/shift.png",
@@ -509,15 +510,15 @@ export const projects: Project[] = [
       "/realisations/shift-4.png",
     ],
     problem:
-      "Les entreprises collectent des idées, des signaux faibles et des opportunités, mais manquent de structure, de visibilité et de méthode pour les transformer en décisions stratégiques mesurables. L'innovation reste fragmentée, non pilotée et difficilement alignée avec les standards internationaux.",
+      "Companies collect ideas, weak signals, and opportunities, but lack structure, visibility, and method to transform them into measurable strategic decisions. Innovation remains fragmented, unmanaged, and difficult to align with international standards.",
 
     solution:
-      "Un OS complet de gestion de l'innovation certifié ISO 56002, permettant de centraliser les idées, structurer les processus, mesurer la performance et aligner l'innovation avec la stratégie d'entreprise.",
+      "A complete innovation management OS certified ISO 56002, allowing to centralize ideas, structure processes, measure performance, and align innovation with corporate strategy.",
 
     features: [
-      "Collecte et centralisation des idées et signaux faibles",
-      "Workflow structuré conforme à la norme ISO 56002",
-      "Gestion des portefeuilles projets innovants",
+      "Collection and centralization of ideas and weak signals",
+      "Structured workflow compliant with ISO 56002",
+      "Management of innovative project portfolios",
     ],
   },
 
@@ -526,9 +527,9 @@ export const projects: Project[] = [
     slug: "kanban",
     title: "Kanban",
     description:
-      "Manage your tasks smarter. Organisez, priorisez et optimisez votre workflow grâce à un Kanban intelligent propulsé par l'IA.",
+      "Manage your tasks smarter. Organize, prioritize and optimize your workflow thanks to a smart Kanban powered by AI.",
     longDescription:
-      "Kanban est une plateforme SaaS moderne de gestion de tâches qui combine la simplicité du Kanban avec la puissance de l'intelligence artificielle. Créez vos boards, organisez vos tâches et laissez l'IA analyser vos priorités, détecter les blocages et optimiser votre productivité en temps réel.",
+      "Kanban is a modern SaaS task management platform that combines the simplicity of Kanban with the power of artificial intelligence. Create your boards, organize your tasks and let AI analyze your priorities, detect bottlenecks and optimize your productivity in real time.",
 
     category: "SaaS",
     tags: ["Productivity", "AI", "Kanban", "Task Management"],
@@ -538,105 +539,103 @@ export const projects: Project[] = [
     gallery: ["/realisations/kanban.png"],
 
     problem:
-      "Les équipes perdent du temps à gérer leurs tâches manuellement, manquent de visibilité sur les priorités et ont du mal à identifier les blocages ou les retards avant qu'ils n'impactent la performance.",
+      "Teams waste time managing their tasks manually, lack visibility on priorities and struggle to identify bottlenecks or delays before they impact performance.",
 
     solution:
-      "Une plateforme Kanban intelligente qui centralise les tâches, automatise l'organisation via l'IA, suggère des priorités, détecte les retards et fournit des insights en temps réel pour améliorer la productivité.",
+      "A smart Kanban platform that centralizes tasks, automates organization via AI, suggests priorities, detects delays and provides real-time insights to improve productivity.",
 
     features: [
-      "Boards Kanban dynamiques avec drag & drop",
-      "Priorisation automatique des tâches via IA",
-      "Détection intelligente des blocages",
+      "Dynamic Kanban boards with drag & drop",
+      "Automatic task prioritization via AI",
+      "Smart bottleneck detection",
     ],
   },
   {
     id: "28",
     slug: "jaggy-store",
     title: "Jaggy Store",
-    description: "Boutique en ligne moderne de vêtements tendance.",
+    description: "Modern online store for trendy clothing.",
     longDescription:
-      "Jaggy Store est une plateforme e-commerce complète dédiée à la mode contemporaine, offrant une expérience d'achat fluide et élégante aux utilisateurs.",
+      "Jaggy Store is a complete e-commerce platform dedicated to contemporary fashion, offering a seamless and elegant shopping experience to users.",
     category: "Web",
     tags: ["E-commerce", "React", "Next.js", "Tailwind"],
     image: "/realisations/jaggy-hero.png",
     gallery: ["/realisations/jaggy-hero.png"],
     problem:
-      "Besoin d'une boutique en ligne performante pour une marque de vêtements en pleine croissance.",
+      "Need for a high-performance online store for a rapidly growing clothing brand.",
     solution:
-      "Développement d'un site e-commerce avec tunnel d'achat optimisé et gestion simplifiée des stocks.",
+      "Development of an e-commerce site with an optimized checkout funnel and simplified inventory management.",
     features: [
-      "Catalogue de produits dynamique",
-      "Système de panier et commande sécurisé",
-      "Interface responsive haute performance",
-      "Gestion des stocks en temps réel",
+      "Dynamic product catalog",
+      "Secure cart and ordering system",
+      "High-performance responsive interface",
+      "Real-time stock management",
     ],
   },
   {
     id: "29",
     slug: "crazy-foot",
     title: "Crazy Foot",
-    description:
-      "La destination ultime pour les passionnés de maillots de football.",
+    description: "The ultimate destination for football jersey enthusiasts.",
     longDescription:
-      "Crazy Foot est un site spécialisé dans la vente de maillots de football authentiques et de collection, conçu pour les fans exigeants cherchant la qualité et l'exclusivité.",
+      "Crazy Foot is a site specialized in the sale of authentic and collectible football jerseys, designed for demanding fans looking for quality and exclusivity.",
     category: "Web",
     tags: ["E-commerce", "Next.js", "Soccer", "Retail"],
     image: "/realisations/crazyfoot-hero.png",
     gallery: ["/realisations/crazyfoot-hero.png"],
     problem:
-      "Difficulté pour les fans de trouver des maillots spécifiques avec une expérience d'achat sécurisée.",
+      "Difficulty for fans to find specific jerseys with a secure shopping experience.",
     solution:
-      "Une plateforme dédiée avec filtres avancés par ligue, club et saison pour une recherche rapide.",
+      "A dedicated platform with advanced filters by league, club and season for a fast search.",
     features: [
-      "Filtres par équipe et saison",
-      "Personnalisation optionnelle des maillots",
-      "Paiement sécurisé et rapide",
-      "Suivi de commande intégré",
+      "Filters by team and season",
+      "Optional jersey customization",
+      "Fast and secure payment",
+      "Integrated order tracking",
     ],
   },
   {
     id: "30",
-    slug: "Magicoon-landing",
-    title: "Magicoon Landing Page",
-    description: "Site vitrine premium pour une banque d'icônes business.",
+    slug: "magicoon",
+    title: "Magicoon",
+    description: "Premium landing page for a business icon bank.",
     longDescription:
-      "Une landing page captivante conçue pour présenter les packs d'icônes Magicoon, mettant en avant la qualité et la diversité du design pour les professionnels.",
+      "A captivating landing page designed to present Magicoon icon packs, highlighting design quality and diversity for professionals.",
     category: "Design",
     tags: ["Landing Page", "UI/UX", "Resources"],
     image: "/realisations/Magicoon-landing-hero.png",
     gallery: ["/realisations/Magicoon-landing-hero.png"],
     problem:
-      "Besoin d'une présentation percutante pour vendre des ressources graphiques premium.",
+      "Need for a powerful presentation to sell premium graphic resources.",
     solution:
-      "Design minimaliste et animations fluides pour valoriser le produit visuel et augmenter les conversions.",
+      "Minimalist design and smooth animations to enhance the visual product and increase conversions.",
     features: [
-      "Showcase interactif d'icônes",
-      "Section de prix claire et structurée",
-      "Optimisation SEO pour le design",
-      "Performance de chargement exceptionnelle",
+      "Interactive icon showcase",
+      "Clear and structured pricing section",
+      "SEO optimization for design",
+      "Exceptional loading performance",
     ],
   },
   {
     id: "31",
-    slug: "Magicoon-search",
+    slug: "magicoon-search",
     title: "Magicoon Search",
-    description:
-      "Moteur de recherche et plateforme de personnalisation d'icônes.",
+    description: "Search engine and icon customization platform.",
     longDescription:
-      "Magicoon Search est une plateforme interactive permettant aux designers de trouver, personnaliser les couleurs et les styles en direct, puis télécharger des icônes sur mesure.",
+      "Magicoon Search is an interactive platform allowing designers to find, customize colors and styles live, then download custom icons.",
     category: "SaaS",
     tags: ["SaaS", "Tool", "Design", "Productivity"],
     image: "/realisations/Magicoon-search-hero.png",
     gallery: ["/realisations/Magicoon-search-hero.png"],
     problem:
-      "Les designers perdent trop de temps à recolorer manuellement les icônes téléchargées.",
+      "Designers waste too much time manually recoloring downloaded icons.",
     solution:
-      "Intégration d'un éditeur SVG en direct pour ajuster les styles avant le téléchargement immédiat.",
+      "Integration of a live SVG editor to adjust styles before immediate download.",
     features: [
-      "Recherche par mots-clés avancée",
-      "Personnalisation des couleurs en direct",
-      "Export multi-formats (SVG, PNG, PDF)",
-      "Gestion de collections personnelles",
+      "Advanced keyword search",
+      "Live color customization",
+      "Multi-format export (SVG, PNG, PDF)",
+      "Personal collection management",
     ],
   },
   {
@@ -644,73 +643,134 @@ export const projects: Project[] = [
     slug: "J-Optic",
     title: "J-Optic",
     description:
-      "Dashboard de gestion de stock pour le réseau national de lunetterie.",
+      "Inventory management dashboard for the national eyewear network.",
     longDescription:
-      "Une solution SaaS robuste pour la gestion centralisée des stocks de lunettes à l'échelle nationale, facilitant la logistique et le réapprovisionnement des opticiens.",
+      "A robust SaaS solution for centralized eyewear inventory management on a national scale, facilitating logistics and restocking for opticians.",
     category: "SaaS",
     tags: ["SaaS", "Dashboard", "Inventory", "Health"],
     image: "/realisations/J-Optic-hero.png",
     gallery: ["/realisations/J-Optic-hero.png"],
     problem:
-      "Manque de visibilité globale sur les stocks de lunettes au niveau national.",
+      "Lack of global visibility on eyewear stocks at the national level.",
     solution:
-      "Dashboard analytique en temps réel avec alertes de stock bas et suivi précis des ventes.",
+      "Real-time analytical dashboard with low stock alerts and precise sales tracking.",
     features: [
-      "Gestion multi-sites centralisée",
-      "Statistiques de vente détaillées",
-      "Alertes de stock automatisées",
-      "Interface de gestion simplifiée",
+      "Centralized multi-site management",
+      "Detailed sales statistics",
+      "Automated stock alerts",
+      "Simplified management interface",
     ],
   },
   {
     id: "33",
     slug: "qarini",
     title: "Qarini",
-    description: "Plateforme d'e-learning interactive pour tous les niveaux.",
+    description: "Interactive e-learning platform for all levels.",
     longDescription:
-      "Qarini est un écosystème d'apprentissage complet permettant aux formateurs et aux étudiants de collaborer efficacement à distance grâce à des outils pédagogiques modernes.",
+      "Qarini is a complete learning ecosystem allowing trainers and students to collaborate effectively remotely thanks to modern pedagogical tools.",
     category: "Web",
     tags: ["Education", "LMS", "E-learning", "React"],
     image: "/realisations/qarini-hero.png",
     gallery: ["/realisations/qarini-hero.png"],
     problem:
-      "Besoin d'une solution d'apprentissage structurée et accessible partout pour les apprenants.",
+      "Need for a structured and accessible learning solution for learners everywhere.",
     solution:
-      "Plateforme LMS avec gestion de cours vidéo, exercices interactifs et suivi complet de progression.",
+      "LMS platform with video course management, interactive exercises and complete progression tracking.",
     features: [
-      "Cours vidéo et ressources PDF",
-      "Quiz et évaluations interactives",
-      "Tableau de bord étudiant personnalisé",
-      "Espace instructeur dédié à la gestion",
+      "Video courses and PDF resources",
+      "Interactive quizzes and evaluations",
+      "Personalized student dashboard",
+      "Dedicated instructor space for management",
     ],
   },
   {
     id: "34",
     slug: "pointage-vdc",
     title: "PointageVDC",
-    description: "",
-    longDescription: "",
-    category: "Web",
-    tags: [""],
+    description: "Comprehensive HR management and time tracking platform.",
+    longDescription:
+      "A robust enterprise solution for time tracking, absence management, and automatic generation of administrative reports.",
+    category: "SaaS",
+    tags: ["SaaS", "HR Tech", "Enterprise"],
     image: "/realisations/pointage-vdc-hero.png",
     gallery: ["/realisations/pointage-vdc-hero.png"],
-    problem: "",
-    solution: "",
-    features: [],
+    problem:
+      "Manual and complex administrative management of attendance and leave.",
+    solution:
+      "Complete automation of the HR cycle, from time tracking to the generation of legal documents.",
+    features: [
+      "Real-time attendance tracking",
+      "Management of leave, RTT, and absences",
+      "Automatic generation of reports and documents",
+      "Analytical HR dashboards",
+    ],
   },
   {
     id: "35",
     slug: "zappicon",
     title: "Zappicon",
-    description: "",
-    longDescription: "",
-    category: "Web",
-    tags: [""],
+    description: "Premium icon library for designers and developers.",
+    longDescription:
+      "A graphic resource platform offering thousands of customizable vector icons, optimized for web and mobile applications.",
+    category: "Design",
+    tags: ["Resources", "Icons", "Open Source"],
     image: "/realisations/zappicon-hero.png",
     gallery: ["/realisations/zappicon-hero.png"],
-    problem: "",
-    solution: "",
-    features: [],
+    problem:
+      "Difficulty finding consistent and easily customizable icons for UI projects.",
+    solution:
+      "A lightning-fast search engine with live customization of styles and colors.",
+    features: [
+      "Intelligent search engine",
+      "Live customization (colors, stroke weight)",
+      "Multi-format export (SVG, PNG, React)",
+      "Weekly updates",
+    ],
+    demoUrl: "https://zappicon.com/",
+  },
+  {
+    id: "36",
+    slug: "lototo-vr",
+    title: "Lototo VR",
+    description: "VR safety simulation for electrical maintenance.",
+    longDescription:
+      "An immersive experience allowing technicians to train in Lockout-Tagout (LOTO) electrical safety procedures without any real risk.",
+    category: "VR",
+    tags: ["VR", "Training", "Safety", "Industry"],
+    image: "/realisations/lototo-vr-hero.png",
+    gallery: ["/realisations/lototo-vr-hero.png"],
+    problem:
+      "Training on real electrical installations is dangerous and costly to organize.",
+    solution:
+      "Photo-realistic virtual environment to validate safety skills before field access.",
+    features: [
+      "Fault scenario simulation",
+      "Lockout procedure step validation",
+      "Risk assessment without danger",
+      "Detailed performance reports",
+    ],
+  },
+  {
+    id: "37",
+    slug: "lazy-land",
+    title: "Lazy Land",
+    description: "Educational and immersive VR game for children.",
+    longDescription:
+      "A fantastic virtual world where children learn while playing, combining interactive storytelling and educational challenges in VR.",
+    category: "VR",
+    tags: ["VR", "Education", "Gaming", "Kids"],
+    image: "/realisations/lazy-land-hero.png",
+    gallery: ["/realisations/lazy-land-hero.png"],
+    problem:
+      "Lack of engagement from traditional learning methods for young children.",
+    solution:
+      "Total immersion in a playful universe that makes education natural and exciting.",
+    features: [
+      "Gamified interactive lessons",
+      "Colorful 3D environments",
+      "Controls adapted for the youngest users",
+      "Educational progress tracking",
+    ],
   },
 ];
 
