@@ -36,7 +36,7 @@ export default function License() {
                 setSelected(i);
               }}
             >
-              Zappicon {page}
+              NovalisAI {page}
             </li>
           ))}
         </ul>
@@ -64,7 +64,7 @@ export default function License() {
                   setSelected(i);
                 }}
               >
-                Zappicon {page}
+                NovalisAI {page}
               </li>
             ))}
           </ul>
@@ -102,29 +102,29 @@ const termsOfUse: ITermOfUse[] = [
       {
         title: "",
         description:
-          "This license outlines your rights and limitations for using the Zappicon library, including the free version. By using any part of the Zappicon, you agree to the terms outlined in this agreement.",
+          "This license outlines your rights and limitations for using the NovalisAI library, including the free version. By using any part of the NovalisAI, you agree to the terms outlined in this agreement.",
       },
       {
         title: "Permitted Uses",
         description:
-          "We grant a license to use the Zappicon library under the following conditions:",
+          "We grant a license to use the NovalisAI library under the following conditions:",
         list: [
-          "Zappicon may be used in both commercial and personal projects.",
+          "NovalisAI may be used in both commercial and personal projects.",
           "Any license you choose allows you to use the icons in unlimited projects and for unlimited clients.",
           "You are allowed to customize icon colors and sizes to match your project’s identity.",
           "Icons may be used in applications, websites, presentations, or printed projects.",
           "You may use the icons within client projects as long as you are not redistributing the icons.",
           "When working on a project for a client you may not deliver more than 400 icons to your client. Please note that each style counts as a separate icon.",
-          "You may share the free version of the Zappicon in its complete and unmodified form, provided that credit is given to the official website.",
+          "You may share the free version of the NovalisAI in its complete and unmodified form, provided that credit is given to the official website.",
         ],
       },
 
       {
         title: "Prohibited Uses",
         list: [
-          "Reselling or redistributing the Zappicon library in its original or modified form is prohibited.",
-          "Using the Zappicon library to create new icon packs or to add to other icon libraries is not allowed.",
-          'Removing the "Zappicon" brand identity is not permitted.',
+          "Reselling or redistributing the NovalisAI library in its original or modified form is prohibited.",
+          "Using the NovalisAI library to create new icon packs or to add to other icon libraries is not allowed.",
+          'Removing the "NovalisAI" brand identity is not permitted.',
           "Icons must not be used in illegal or offensive content.",
           'Redistribution or inclusion of icons in products sold to third parties is not allowed, whether in original or modified form, without obtaining the "Extended License".',
         ],
@@ -140,7 +140,7 @@ const termsOfUse: ITermOfUse[] = [
           <>
             If you have not downloaded the files, you may request a refund
             within 7 days of purchase by contacting us at:{" "}
-            <span className="font-semibold">support@zappicon.com</span>. We
+            <span className="font-semibold">support@NovalisAI.com</span>. We
             highly recommend reviewing the icon previews carefully, as we
             provide full previews and free icons for direct hands-on experience
             before purchase.
@@ -150,12 +150,12 @@ const termsOfUse: ITermOfUse[] = [
       {
         title: "Intellectual Property",
         description:
-          "All intellectual and commercial rights to the icons remain the exclusive property of Zappicon.",
+          "All intellectual and commercial rights to the icons remain the exclusive property of NovalisAI.",
       },
       {
         title: "Limitation of Liability",
         description:
-          "We are not liable for any direct or indirect damages resulting from the use of the Zappicon.",
+          "We are not liable for any direct or indirect damages resulting from the use of the NovalisAI.",
       },
       {
         title: "Changes to Terms",
@@ -167,7 +167,7 @@ const termsOfUse: ITermOfUse[] = [
         description: (
           <>
             For any inquiries, our team is available and ready to assist you:{" "}
-            <span className="font-semibold">support@zappicon.com</span>
+            <span className="font-semibold">support@NovalisAI.com</span>
           </>
         ),
       },

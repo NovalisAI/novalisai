@@ -153,19 +153,19 @@ export const projects: Project[] = [
   },
   {
     id: "7",
-    slug: "zappicon",
-    title: "Zappicon",
+    slug: "novalisai",
+    title: "NovalisAI",
     description: "Modern tech startup website.",
     longDescription:
-      "Zappicon is a startup-oriented website focused on clarity, branding, and digital presence.",
+      "NovalisAI is a startup-oriented website focused on clarity, branding, and digital presence.",
     category: "Web",
     tags: ["Startup", "Landing Page"],
-    image: "/realisations/zappicon-hero.png",
-    gallery: ["/realisations/zappicon-hero.png"],
+    image: "/realisations/NovalisAI-hero.png",
+    gallery: ["/realisations/NovalisAI-hero.png"],
     problem: "Need for strong startup web presence.",
     solution: "Designed and built a modern, conversion-focused website.",
     features: ["Clean branding", "Conversion optimized", "Responsive layout"],
-    demoUrl: "https://zappicon.com/",
+    demoUrl: "https://Novalisai.com/",
     featured: true,
   },
   {
@@ -596,15 +596,15 @@ export const projects: Project[] = [
   },
   {
     id: "30",
-    slug: "magficon-landing",
-    title: "Magficon Landing Page",
+    slug: "Magicoon-landing",
+    title: "Magicoon Landing Page",
     description: "Site vitrine premium pour une banque d'icônes business.",
     longDescription:
-      "Une landing page captivante conçue pour présenter les packs d'icônes Magficon, mettant en avant la qualité et la diversité du design pour les professionnels.",
+      "Une landing page captivante conçue pour présenter les packs d'icônes Magicoon, mettant en avant la qualité et la diversité du design pour les professionnels.",
     category: "Design",
     tags: ["Landing Page", "UI/UX", "Resources"],
-    image: "/realisations/magficon-landing-hero.png",
-    gallery: ["/realisations/magficon-landing-hero.png"],
+    image: "/realisations/Magicoon-landing-hero.png",
+    gallery: ["/realisations/Magicoon-landing-hero.png"],
     problem:
       "Besoin d'une présentation percutante pour vendre des ressources graphiques premium.",
     solution:
@@ -618,16 +618,16 @@ export const projects: Project[] = [
   },
   {
     id: "31",
-    slug: "magficon-search",
-    title: "Magficon Search",
+    slug: "Magicoon-search",
+    title: "Magicoon Search",
     description:
       "Moteur de recherche et plateforme de personnalisation d'icônes.",
     longDescription:
-      "Magficon Search est une plateforme interactive permettant aux designers de trouver, personnaliser les couleurs et les styles en direct, puis télécharger des icônes sur mesure.",
+      "Magicoon Search est une plateforme interactive permettant aux designers de trouver, personnaliser les couleurs et les styles en direct, puis télécharger des icônes sur mesure.",
     category: "SaaS",
     tags: ["SaaS", "Tool", "Design", "Productivity"],
-    image: "/realisations/magficon-search-hero.png",
-    gallery: ["/realisations/magficon-search-hero.png"],
+    image: "/realisations/Magicoon-search-hero.png",
+    gallery: ["/realisations/Magicoon-search-hero.png"],
     problem:
       "Les designers perdent trop de temps à recolorer manuellement les icônes téléchargées.",
     solution:
@@ -641,16 +641,16 @@ export const projects: Project[] = [
   },
   {
     id: "32",
-    slug: "joptic",
-    title: "Joptic",
+    slug: "J-Optic",
+    title: "J-Optic",
     description:
       "Dashboard de gestion de stock pour le réseau national de lunetterie.",
     longDescription:
       "Une solution SaaS robuste pour la gestion centralisée des stocks de lunettes à l'échelle nationale, facilitant la logistique et le réapprovisionnement des opticiens.",
     category: "SaaS",
     tags: ["SaaS", "Dashboard", "Inventory", "Health"],
-    image: "/realisations/joptic-hero.png",
-    gallery: ["/realisations/joptic-hero.png"],
+    image: "/realisations/J-Optic-hero.png",
+    gallery: ["/realisations/J-Optic-hero.png"],
     problem:
       "Manque de visibilité globale sur les stocks de lunettes au niveau national.",
     solution:
@@ -683,6 +683,34 @@ export const projects: Project[] = [
       "Tableau de bord étudiant personnalisé",
       "Espace instructeur dédié à la gestion",
     ],
+  },
+  {
+    id: "34",
+    slug: "pointage-vdc",
+    title: "PointageVDC",
+    description: "",
+    longDescription: "",
+    category: "Web",
+    tags: [""],
+    image: "/realisations/pointage-vdc-hero.png",
+    gallery: ["/realisations/pointage-vdc-hero.png"],
+    problem: "",
+    solution: "",
+    features: [],
+  },
+  {
+    id: "35",
+    slug: "zappicon",
+    title: "Zappicon",
+    description: "",
+    longDescription: "",
+    category: "Web",
+    tags: [""],
+    image: "/realisations/zappicon-hero.png",
+    gallery: ["/realisations/zappicon-hero.png"],
+    problem: "",
+    solution: "",
+    features: [],
   },
 ];
 

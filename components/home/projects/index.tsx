@@ -22,7 +22,7 @@ export default function Projects() {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Zappicon Library",
+    title: "NovalisAI Library",
     description:
       "A comprehensive icon library with 22,000+ icons across 28 categories, supporting multiple formats and styles.",
     category: "Design System",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     description:
       "Full-stack web application enabling seamless business operations and digital transformation workflows.",
     category: "Web Development",
-    icon: "/assets/building-zappicon.png",
+    icon: "/assets/building-NovalisAI.png",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description:
       "Immersive augmented reality solution for employee training and skill development in manufacturing.",
     category: "VR/AR",
-    icon: "/assets/cube-simple-zappicon.svg",
+    icon: "/assets/cube-simple-NovalisAI.svg",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     description:
       "Machine learning solution providing real-time insights and predictive analytics for business intelligence.",
     category: "Artificial Intelligence",
-    icon: "/assets/chart-pie-simple-zappicon.png",
+    icon: "/assets/chart-pie-simple-NovalisAI.png",
   },
   {
     id: 5,
@@ -66,6 +66,6 @@ export const projects: Project[] = [
     description:
       "E-commerce platform connecting sellers and buyers with secure payments and real-time inventory management.",
     category: "E-Commerce",
-    icon: "/assets/basket-shopping-zappicon.png",
+    icon: "/assets/basket-shopping-NovalisAI.png",
   },
 ];

@@ -1,52 +1,77 @@
 import Image from "next/image";
 
-
-const ads = true
+const ads = true;
 
 export default function Vision() {
   return (
     <section className="py-24 space-y-12">
-      <div className='flex flex-col-reverse space-x-6 lg:flex-row lg:gap-0'>
-        <div className='flex-1'>
+      <div className="flex flex-col-reverse space-x-6 lg:flex-row lg:gap-0">
+        <div className="flex-1">
           <h2 className="heading-4 font-medium mb-4">OUR VISION</h2>
           <h3 className="heading-3 font-bold mb-4">
-            ZAPPICON <span className="font-normal">LIBRARY</span>
+            NovalisAI <span className="font-normal">LIBRARY</span>
           </h3>
           <p className="heading-6 mb-6">
             Driven by our passion for simplifying design workflows,{" "}
-            <span className="font-semibold">Zappicon</span> empowers designers,
-            developers, and businesses with easy access to high-quality vector UI
-            icons.
+            <span className="font-semibold">NovalisAI</span> empowers designers,
+            developers, and businesses with easy access to high-quality vector
+            UI icons.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="flex items-center gap-2">
-              <Image alt='check' src='/assets/check.svg' className='w-5 h-5' width={20} height={20} />
+              <Image
+                alt="check"
+                src="/assets/check.svg"
+                className="w-5 h-5"
+                width={20}
+                height={20}
+              />
               <span>Large Icons Library.</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image alt='check' src='/assets/check.svg' className='w-5 h-5' width={20} height={20} />
+              <Image
+                alt="check"
+                src="/assets/check.svg"
+                className="w-5 h-5"
+                width={20}
+                height={20}
+              />
               <span>Multiple Styles.</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image alt='check' src='/assets/check.svg' className='w-5 h-5' width={20} height={20} />
+              <Image
+                alt="check"
+                src="/assets/check.svg"
+                className="w-5 h-5"
+                width={20}
+                height={20}
+              />
               <span>Diverse Categories.</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image alt='check' src='/assets/check.svg' className='w-5 h-5' width={20} height={20} />
+              <Image
+                alt="check"
+                src="/assets/check.svg"
+                className="w-5 h-5"
+                width={20}
+                height={20}
+              />
               <span>Lifetime Updates.</span>
             </div>
           </div>
         </div>
-        <div className='flex-1 mb-12 lg:mb-0'>
-          {ads && (<Image
-            src='/assets/about-zappicon-library.png'
-            alt='About zappicon library'
-            sizes="100%"
-            width={0}
-            height={0}
-            className="rounded-xl w-150 mx-auto h-auto"
-          />)}
+        <div className="flex-1 mb-12 lg:mb-0">
+          {ads && (
+            <Image
+              src="/assets/about-NovalisAI-library.png"
+              alt="About NovalisAI library"
+              sizes="100%"
+              width={0}
+              height={0}
+              className="rounded-xl w-150 mx-auto h-auto"
+            />
+          )}
         </div>
       </div>
 

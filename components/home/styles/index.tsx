@@ -34,7 +34,7 @@ export default function Styles() {
         ))}
         <div className="bg-[#F58855] rounded-xl text-surface space-x-6 pt-8 pb-8 px-10 flex items-start col-span-2 lg:col-span-2">
           <Image
-            src="/assets/Keyline-zappicon.png"
+            src="/assets/Keyline-NovalisAI.png"
             width={96}
             height={96}
             alt="keyline"

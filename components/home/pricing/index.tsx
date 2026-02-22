@@ -76,7 +76,7 @@ const pricingData: Pricing[] = [
       },
     ],
     ctaText: "Start for Free",
-    ctaLink: "https://zappicon.gumroad.com/l/ptyjww",
+    ctaLink: "https://NovalisAI.gumroad.com/l/ptyjww",
   },
   {
     title: "SOLO",
@@ -121,7 +121,7 @@ const pricingData: Pricing[] = [
     ],
     popular: "30% OFF",
     ctaText: "Buy Now",
-    ctaLink: "https://zappicon.gumroad.com/l/gydqgj/SUMMER2025",
+    ctaLink: "https://NovalisAI.gumroad.com/l/gydqgj/SUMMER2025",
   },
   {
     title: "TEAM",
@@ -167,6 +167,6 @@ const pricingData: Pricing[] = [
     popular: "30% OFF",
     ctaText: "Buy Now",
     ctaLink:
-      "https://zappicon.gumroad.com/l/gydqgj/SUMMER2025/?option=MNXlXHq7jCEgIxcVgVox3Q%3D%3D",
+      "https://NovalisAI.gumroad.com/l/gydqgj/SUMMER2025/?option=MNXlXHq7jCEgIxcVgVox3Q%3D%3D",
   },
 ];

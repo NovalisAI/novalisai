@@ -13,7 +13,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjectsBySlugs } from "@/lib/projects";
 
-const projects = getProjectsBySlugs(["capi"]);
+const projects = getProjectsBySlugs([
+  "capi",
+  "proxima",
+  "myworkflow",
+  "pointage-vdc",
+]);
 
 const ProjectShowcase: React.FC = () => {
   const [activeProject, setActiveProject] = useState(0);

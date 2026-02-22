@@ -12,7 +12,7 @@ export default function HomeLayout({
       <Navbar />
       <main className="md:pt-20">
         {children}
-        <Container type="intrinsic">
+        <Container type="intrinsic" className="pt-12 pb-12">
           <Footer />
         </Container>
       </main>

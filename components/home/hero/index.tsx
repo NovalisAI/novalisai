@@ -40,13 +40,13 @@ export default function Hero() {
 
   const featuredProjects = getProjectsBySlugs([
     "capi",
-    "capi",
-    "capi",
-    "capi",
-    "capi",
-    "capi",
-    "capi",
-    "capi",
+    "decode-hack",
+    "upmate",
+    "pointage-vdc",
+    "jaggy-store",
+    "nightbyte-website",
+    "jethings",
+    "mohandisson",
   ]).map((project) => project.image);
 
   const isMobile = windowWidth < 768;
@@ -72,7 +72,7 @@ export default function Hero() {
         imageWidth={orbitConfig.imageWidth}
         imageHeight={orbitConfig.imageHeight}
         animationDuration={80}
-        className={isMobile ? "" : "translate-x-12"}
+        className=""
       />
 
       <motion.div

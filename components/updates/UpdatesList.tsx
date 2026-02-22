@@ -51,7 +51,7 @@ const updates: Update[] = [
     ameliorations: [
       {
         type: "Initial Release",
-        content: "Official launch of the Zappicon library.",
+        content: "Official launch of the NovalisAI library.",
       },
     ],
   },

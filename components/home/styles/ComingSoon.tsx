@@ -6,8 +6,8 @@ export default function ComingSoon() {
   return (
     <div className={cn("bg-primary text-surface rounded-xl py-10 px-8")}>
       <Image
-        src={"/assets/light-style-zappicon.png"}
-        alt={"coming-soon-style-zappicon"}
+        src={"/assets/light-style-NovalisAI.png"}
+        alt={"coming-soon-style-NovalisAI"}
         sizes="100%"
         width={0}
         height={0}

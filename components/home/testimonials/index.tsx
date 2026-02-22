@@ -35,8 +35,8 @@ const testimonials: Testimonial[] = [
     name: "Nishanth Manimaran",
     title: "Web Designer",
     content:
-      "I've had a fantastic experience using the zappicon icon pack I downloaded. The variety of formats and easy accessibility make it a go-to for my projects. With a plethora of options across different categories, it's a versatile tool that enhances the visual appeal of my work.",
-    // avatar: "/assets/testimonial-zappicon-avatar-1.png",
+      "I've had a fantastic experience using the NovalisAI icon pack I downloaded. The variety of formats and easy accessibility make it a go-to for my projects. With a plethora of options across different categories, it's a versatile tool that enhances the visual appeal of my work.",
+    // avatar: "/assets/testimonial-NovalisAI-avatar-1.png",
   },
   {
     id: 2,
@@ -44,23 +44,23 @@ const testimonials: Testimonial[] = [
     title: "Product Designer",
     content:
       "Greatest and most usable icon library so far. Tried many other libraries, but this is the best that fits most of my projects. Also well worth the price! Thank you!",
-    // avatar: "/assets/testimonial-zappicon-avatar-1.png",
+    // avatar: "/assets/testimonial-NovalisAI-avatar-1.png",
   },
   {
     id: 3,
     name: "Antonio J",
     title: "Full Stack Developer",
     content:
-      "I love using Zappicon in my projects; it gives them a special touch that makes them look modern and clean. It saves me so much time. It's truly worth it.",
-    // avatar: "/assets/testimonial-zappicon-avatar-1.png",
+      "I love using NovalisAI in my projects; it gives them a special touch that makes them look modern and clean. It saves me so much time. It's truly worth it.",
+    // avatar: "/assets/testimonial-NovalisAI-avatar-1.png",
   },
   {
     id: 4,
     name: "Ramzy Kemmoun",
     title: "Software Engineer",
     content:
-      "I love how clean and good-looking the icons from Zappicon are. They make any UI feel more modern and professional",
-    // avatar: "/assets/testimonial-zappicon-avatar-1.png",
+      "I love how clean and good-looking the icons from NovalisAI are. They make any UI feel more modern and professional",
+    // avatar: "/assets/testimonial-NovalisAI-avatar-1.png",
   },
 ];
 
@@ -76,7 +76,8 @@ export default function Testimonials() {
   const handlePrevious = useCallback(() => {
     setDirection(-1);
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+      (prevIndex) =>
+        (prevIndex - 1 + testimonials.length) % testimonials.length,
     );
   }, []);
 
@@ -92,7 +93,7 @@ export default function Testimonials() {
       <div className="text-center mb-24">
         <h2 className="heading-2 font-bold mb-2">
           See What Others Are Saying <br /> About{" "}
-          <span className="text-primary">Zappicon!</span>
+          <span className="text-primary">NovalisAI!</span>
         </h2>
       </div>
 
